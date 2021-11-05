@@ -9,7 +9,7 @@
     /* margins */
     --margin: 10%;
     /* border */
-    --show: 1px;
+    --show: 0px;
     --border: var(--show) solid #ff4ee1;
     --border-section: var(--show) solid #ffc3f5;
     /* colors */

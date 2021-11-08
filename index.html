@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <title>StyleBjonas</title>
@@ -25,32 +26,70 @@
     </section> -->
     <section class="services">
         <h1>Services</h1>
+        <!-- <section class="services_card services_animation"> -->
         <section class="services_card">
-            <section class="haircut services_card_sect">
+            <a2 id="serv_back">X</a2>
+            <section id="haircut_list_prices" class="list_prices">
+                 <hs1>Color</hs1> 
+                 <hs11>75e 1hr30min</hs11>
+
+                 <hs20>Organic Brazilian Blow Out</hs20>  
+                 <hs2>Short</hs2>
+                 <hs22>129e 1hr 55mins</hs22>
+                 <hs2>Medium</hs2>
+                 <hs22>179e 1hr 35mins</hs22>
+                 <hs2>Long Hair</hs2>
+                 <hs22>229e 2hrs 30mins</hs22>
+                 <hs2>Extra Long Hair</hs2>
+                 <hs22>279e 3hrs 30mins</hs22>
+
+                 <hs3>Color</hs3> 
+                 <hs33>75e 1hr30min</hs33>
+                 <hs3>Highlights</hs3> 
+                 <hs33>60e 1hr Half Head</hs33>
+                 <hs3>Highlights</hs3> 
+                 <hs33>120e 1hr 30min Full Head</hs33>
+                 <hs3>Baby-lights</hs3> 
+                 <hs33>100e 1hr</hs33>
+                 <hs3>Balayage</hs3> 
+                 <hs33>100e 1hr</hs33>
+                 <hs3>Single Step Bleaching</hs3> 
+                 <hs33>60e 1hr from</hs33>
+                 <hs3>Demi-permanent Color</hs3> 
+                 <hs33>29e 30min Toner</hs33>     
+                 <hs3>Balayage</hs3> 
+                 <hs33>100e 1hr</hs33>
+                 <hs3>Single Step Bleaching</hs3> 
+                 <hs33>60e 1hr from</hs33>
+                 <hs3>Demi-permanent Color</hs3> 
+                 <hs33>29e 30min Toner</hs33>    
+            </section>
+            <section id="haircut_grid" class="haircut services_card_sect">
                 <div class="article_img_haircut div_img"></div>
                 <article>
-                    <h3>Hair cut</h3>
-                    <p>Double tap too see the haircut menu</p>
-                    <p>From 25e to 50e</p>
+                    <h3 id="haircut_button">Hair cut</h3>
+                    <p1>Aim to offer customized styles to strike the perfect balance of looks that are enduring, yet original.</p1>
+                    <a1 id="haircut_menu">View menu</a1>
                 </article>
             </section>
-            <section class="treatments services_card_sect">
-                <article>            
-                    <h3>Treatments</h3>
-                    <p>Double tap too see the treatments menu</p>
-                    <p>From 25e to 50e</p>
-                </article>
+            <section id="treatments_grid" class="treatments services_card_sect treatments_animation">
                 <div class="article_img_treatment div_img"></div>
+                <article>
+                    <h3 id="treatments_button">Treatments</h3>
+                    <p1>Restore and protect your scalp & boost hair growth. Keratina, Hyaluronic Acid & Masks</p1>
+                    <a1 id="treatments_menu">View menu</a1>
+                    </article>
             </section>
-            <section class="color services_card_sect">
+            <section id="color_grid" class="color services_card_sect">
                 <div class="article_img_color div_img"></div>
                 <article>
-                    <h3>Color</h3>
-                    <p>Double tap too see the color menu</p>
-                    <p>From 25e to 50e</p>
+                    <h3 id="color_button">Color</h3>
+                    <p1>Employing hair products with some of the most natural and rich ingredients because I believe you should never expect less.</p1>
+                    <a1 id="color_menu">View menu</a1>
                 </article>
             </section>  
         </section>
+
     </section>
     <section class="worktime">
         <article>
@@ -73,21 +112,22 @@
                 <div class="card_img_flam"></div>
                 <section>
                     <h3>Flamboyage</h3>
-                    <p>This is one of the latest hair colouring technique for those who want a truly blended, natural looking highlights.</p>    
+                    <p>One of the latest hair colouring technique for those who want a truly blended, natural looking highlights.</p>    
                 </section>
             </div>
             <div class="card">
                 <div class="card_img_rehab"></div>
                 <section>
                     <h3>Rehab</h3>
-                    <p>This is one of the latest hair colouring technique for those who want a truly blended, natural looking highlights.</p>    
+                    <p>Hair cut + Regenerating hair mask with immediate action. Perfect for all hair types, when in a hurry.</p>    
                 </section>
             </div>
             <div class="card">
                 <div class="card_img_kera"></div>
                 <section>
                     <h3>Brazilian Blow Out</h3>
-                    <p>This is one of the latest hair colouring technique for those who want a truly blended, natural looking highlights.</p>    
+                    <p>Restores the health of your hair and offers an absolute and shiny smoothness with a high concentration of Kerat for frizz-free hair for 6 months.
+                    </p>    
                 </section>
             </div>
         </section>

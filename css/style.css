@@ -13,7 +13,7 @@
     --border: var(--show) solid #ff4ee1;
     --border-section: var(--show) solid #ffc3f5;
     /* colors */
-    --color-white: rgba(255, 255, 255, 0.9);
+    --color-white: rgba(255, 255, 255, 0.845);
     --color-white-decor: rgba(255, 255, 255, 0.3);
     --bg: #FFFF;
 }
@@ -55,8 +55,8 @@ p1{
     display: block;
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    font-weight: 300; 
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    font-weight: 200; 
     border: var(--border);
 }
 
@@ -68,9 +68,8 @@ h3{
     letter-spacing: 1.5px;
     font-size: clamp(1.1rem, 2vw, 1.7rem); 
     text-transform: uppercase;
-    padding: 0;
+    padding: 0%;
     border: var(--border);
-
 }
 h4{
     color: black;
@@ -88,14 +87,16 @@ a1{
     font-family: 'Urbanist', sans-serif;
     font-size: 0.8rem;
     border-radius: 12px;
-    padding: 3%;
+    padding: 4%;
     /* text-transform:uppercase; */
     background: rgba(255, 255, 255, 0.2);
     /* display text */
     text-align: center;
     /* decor */
     cursor: pointer;
-    
+}
+a1:hover{
+    background: rgba(255, 255, 255, 0.33);
 }
 
 /* Displaying */
@@ -103,7 +104,6 @@ main{
     grid-column: 1 / -1;
     grid-row: 1;
     height: 100vh;
-
     /* border: var(--border-section); */
     /* grid layout */
     display: grid;
@@ -228,7 +228,7 @@ main h6{
     display: grid;
     height: auto;
     grid-template-columns: var(--margin) repeat(9,1fr) var(--margin);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     /* decor */
     background: linear-gradient(228.04deg, rgba(24, 102, 113, 0.72) 26.33%, rgba(51, 150, 137, 0.85) 92.46%), #000000;    /* background: linear-gradient(180deg, rgba(24, 102, 113, 0.8) 0%, #339689 100%), #000000; */
     /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(180deg, #0E4951 0%, rgba(14, 73, 81, 0) 100%), linear-gradient(140.4deg, #0E4951 20.13%, rgba(14, 73, 81, 0) 77.37%), radial-gradient(68.2% 215.56% at 5.74% 120.14%, rgba(150, 166, 50, 0) 17.19%, rgba(150, 166, 50, 0.79) 36.09%, rgba(150, 166, 50, 0) 55.21%), linear-gradient(252.44deg, #2FBFA5 0%, #21777A 100%), linear-gradient(0deg, #0E4951, #0E4951);    background: linear-gradient(334.11deg, rgba(15, 115, 104, 0.5) 0%, rgba(140, 116, 23, 0.36) 46.88%, rgba(15, 115, 104, 0.25) 100%);; */
@@ -283,8 +283,9 @@ main h6{
     background-position: 82% 18%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: clamp(7em,10vw,10em);
+    height: clamp(6em,10vw,10em);
     border-right: 1px solid var(--color-white-decor);
+    margin:auto 0%;
 }
 
 .article_img_haircut{
@@ -299,16 +300,26 @@ main h6{
     grid-column: 1;
     background-image: url('/css/svg/treatments.svg');
 }
+#serv_back{
+    background-image: url('/css/svg/back.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20%;
+    width: 20%;
+    animation: show 1s;
+    border: var(--border);
+}
 /* animations */
 a2{
     display: none;
     cursor: pointer;
-    grid-column: 11;
+    grid-column: 10;
     grid-row: 1;
     z-index: 10;
-    background: #ffffffc8;
     margin: auto;
     margin-top: 0%;
+    margin-right: 0%;
     padding: 10px;
     border-radius: 20px;
 }
@@ -496,112 +507,92 @@ footer{
 }
 
 /* ANIMATIONS */
-@keyframes hairshow{
+@keyframes show{
     from{
-        grid-column: 2/6;
         opacity: 0;
-    }
-    25%{
-        opacity: 0;
-        transform: translateX(5%);
-    }
-    75%{
-        opacity: 0;
-        transform: translateX(0%);
     }
     to{
-        grid-column: 2/9;
         opacity: 1;
     }
 }
-@keyframes hairmove{
+@keyframes erase{
     from{
-        grid-column: 2/9;
         opacity: 0;
-    }
-    25%{
-        opacity: 0;
-        transform: translateX(-5%);
-    }
-    75%{
-        opacity: 0;
-        transform: translateX(2%);
     }
     to{
-        grid-column: 2/6;
         opacity: 1;
     }
 }
 @keyframes treatmentsshow{
     from{
-        grid-column: 2/6;
-        opacity: 0;
+        grid-column: 2;
+        /* opacity: 0; */
     }
     25%{
-        opacity: 0;
-        transform: translateX(5%);
+        /* opacity: 0; */
+        /* transform: translateX(5%); */
     }
     75%{
-        opacity: 0;
-        transform: translateX(0%);
+        /* opacity: 0; */
+        /* transform: translateX(0%); */
     }
     to{
         grid-column: 3/10;
-        opacity: 1;
+        /* opacity: 1; */
     }
 }
 @keyframes treatmentsmove{
     from{
         grid-column: 3/10;
-        opacity: 0;
+        /* opacity: 0; */
     }
     25%{
-        opacity: 0;
-        transform: translateX(-5%);
+        /* opacity: 0; */
+        /* transform: translateX(-5%); */
     }
     75%{
-        opacity: 0;
-        transform: translateX(2%);
+        /* opacity: 0; */
+        /* transform: translateX(2%); */
     }
     to{
-        grid-column: 2/6;
-        opacity: 1;
-    }
-}
-@keyframes colorshow{
-    from{
-        grid-column: 2/6;
-        opacity: 0;
-    }
-    25%{
-        opacity: 0;
-        transform: translateX(5%);
-    }
-    75%{
-        opacity: 0;
-        transform: translateX(0%);
-    }
-    to{
-        grid-column: 4/11;
-        opacity: 1;
+        grid-column: 2;
+        /* opacity: 1; */
     }
 }
 @keyframes colormove{
     from{
         grid-column: 4/11;
-        opacity: 0;
+        /* opacity: 0; */
     }
     25%{
-        opacity: 0;
-        transform: translateX(-5%);
+        /* opacity: 0; */
+        /* transform: translateX(-5%); */
     }
     75%{
-        opacity: 0;
-        transform: translateX(2%);
+        /* opacity: 0; */
+        /* transfo/rm: translateX(2%); */
     }
     to{
-        grid-column: 2/6;
-        opacity: 1;
+        grid-column: 3;
+        /* opacity: 1; */
+    }
+}
+@keyframes colorshow{
+    from{
+        grid-column: 3;
+        /* opacity: 0; */
+    }
+    25%{
+        /* opacity: 0; */
+        /* transform: translateX(5%); */
+    }
+    75%{
+        /* opacity: 0; */
+        /* transform: translateX(0%); */
+    }
+    to{
+        grid-column: 4/11;
+        /* opacity: 1; */
     }
 }
 /* list prices */
@@ -611,15 +602,42 @@ footer{
 /* fonts */
 hs1, hs11, hs2, hs20, hs22, hs3, hs33{
     font-family: 'Urbanist', sans-serif;
-    text-align: center;
+    text-align: left;
     color: var(--color-white);
 }
-
+hs1, hs2, hs3{
+    color: var(--color-white);
+    font-family: 'Urbanist', sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.4rem); 
+    font-weight: 400;
+    border: var(--border);
+}
+hs11, hs22, hs33{
+    color: var(--color-white);
+    font-family: 'Urbanist', sans-serif;
+    font-size: clamp(0.9rem, 1.8vw, 1.4rem); 
+    font-style: italic;
+    font-weight: 200;
+    border: var(--border);
+}
+hs10, hs20, hs30{
+    color: var(--color-white);
+    font-family: 'Della Respira', serif;
+    font-size: clamp(1.05rem, 1.8vw, 1.4rem); 
+    font-weight: 400;
+    margin-left: -6%;
+    margin-bottom: 3%;
+    border: var(--border);
+}
 hs1{
+    display: none;
+}
+hs10{
     display: none;
 }
 hs11{
     display: none;
+    margin-bottom: 6%;
 }
 hs20{
     display: none;
@@ -629,43 +647,52 @@ hs2{
 }
 hs22{
     display: none;
+    margin-bottom: 6%;
 }
 hs3{
     display: none;
 }
 hs33{
     display: none;
+    margin-bottom: 6%;
 }
 /*  */
+.services_card_sect.active.selected{
+    background: rgba(0, 0, 0, 0.4);
+}
+.services_card_sect.active{
+    padding: 8% 10%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
 .services_card_sect.active>article{
     grid-column: 1/-1;
     padding: 0%;
 }
-.halist_prices>hs11, .halist_prices>hs22,.halist_prices>hs33{
-    margin-bottom: 3%;
+.halist_prices>article, .trlist_prices>article,.colist_prices>article{
+    margin: auto;
 }
 
-.halist_prices>hs1, .halist_prices>hs11, .trlist_prices>hs2, .trlist_prices>hs20, .trlist_prices>hs22, .colist_prices>hs3, .colist_prices>hs33{
+.halist_prices>article>hs1, .halist_prices>article>hs10, .halist_prices>article>hs11, .trlist_prices>article>hs2, .trlist_prices>article>hs20, .trlist_prices>article>hs22, .colist_prices>article>hs3, .colist_prices>article>hs33{
     display: block;
-    margin: auto;
+    animation: show 1s;    
     border: var(--border);
 }
 .halist_prices, .trlist_prices, .colist_prices{
     /* background: rgba(0, 0, 0, 0.6); */
-    grid-column: 5/-2;
-    grid-row: 1/-1;
+    grid-column: 1/-1;
+    grid-row: 2;
     height: auto;
     width: 100%;
-    justify-content: center;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.4);
-    padding: 10%;
+    /* here-s the key for height */
+    padding: 100px 0%;
     margin: auto;
     border: var(--border);
 }
 .list_prices{
     display: none;
-
 }
 .halist_prices{
 }

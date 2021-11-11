@@ -102,7 +102,7 @@ a1:hover{
 @media screen and (max-width: 500px) {
     h3{
         letter-spacing: 0.2px;
-        font-size: clamp(1rem, 2.2vw, 1.7rem); 
+        font-size: clamp(0.9rem, 2.2vw, 1.7rem); 
     }
     p{
         font-size: clamp(0.7rem, 1.8vw, 1.4rem); 

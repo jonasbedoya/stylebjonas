@@ -89,7 +89,6 @@ function colorlistshow(){
 function backtomenuanimate(){
     // animation
     gsap.fromTo(backmenu,{scale:1, opacity:1},{scale:0,opacity:0});
-
     gsap.to(servicescard,{xPercent: -70, opacity:0, duration:0.8, delay:0.3, onComplete:function() {
       backtomenu();
       gsap.fromTo(servicescard,{xPercent: null, opacity:0},{xPercent: null, opacity:1});
@@ -101,6 +100,10 @@ function backtomenu(){
   treatmentsbutton.style.margin = null;
   colorbutton.style.margin = null;
 
+  haircutgrid.style.margin = null;
+  treatmentsgrid.style.margin = null;
+  colorgrid.style.margin = null;
+
   servicescard.style.paddingBottom = null;
   servicescard.style.gridTemplateRows = null;
 
@@ -110,6 +113,10 @@ function backtomenu(){
   haircutlist.classList.remove('halist_prices');
   haircutlist.classList.remove('trlist_prices');
   haircutlist.classList.remove('colist_prices');
+
+  servicescard.style.display = 'flex';
+  servicescard.style.gridTemplateColumns = null;
+  servicescard.style.gridTemplateRows = null;
 
   if (haircutgrid.classList.contains('active')){
     haircutgrid.classList.remove('active');
@@ -163,25 +170,32 @@ function displayservicemenu(){
   colorbutton.style.margin = 'auto';
 
   servicescard.style.padding = '4% 0%';
+  servicescard.style.display = 'grid';
+  servicescard.style.gridTemplateColumns = 'var(--margin) repeat(3, 1fr) var(--margin)';
   servicescard.style.gridTemplateRows = '65px 90%';
   servicescard.style.background = 'none';
+
+  haircutgrid.style.margin = '0%';
+  treatmentsgrid.style.margin = '0%';
+  colorgrid.style.margin = '0%';
+
   haircutlist.style.display = 'flex'
   backmenu.style.display = 'block';
   if (!haircutgrid.classList.contains('active')){
     haircutgrid.classList.add('active');
-    haircutgrid.style.gridColumn = '2/5';
+    haircutgrid.style.gridColumn = '2';
     haircutgrid.style.gridRow = '1';
   } 
   if (!treatmentsgrid.classList.contains('active')){
     treatmentsgrid.classList.add('active');
     // treatmentsgrid.style.animation = 'erase 2s ease-in-out';
-    treatmentsgrid.style.gridColumn = '5/8';
+    treatmentsgrid.style.gridColumn = '3';
     treatmentsgrid.style.gridRow = '1';
   } 
   if(!colorgrid.classList.contains('active')){
     colorgrid.classList.add('active');
     // colorgrid.style.animation = 'erase 2s ease-in-out';
-    colorgrid.style.gridColumn = '8/11';
+    colorgrid.style.gridColumn = '4';
     colorgrid.style.gridRow = '1';
   } 
 // erase everything useless

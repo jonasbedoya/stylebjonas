@@ -88,7 +88,9 @@ function colorlistshow(){
 // funcs
 function backtomenuanimate(){
     // animation
-    gsap.to(servicescard,{xPercent: -70, opacity:0, duration:0.8, onComplete:function() {
+    gsap.fromTo(backmenu,{scale:1, opacity:1},{scale:0,opacity:0});
+
+    gsap.to(servicescard,{xPercent: -70, opacity:0, duration:0.8, delay:0.3, onComplete:function() {
       backtomenu();
       gsap.fromTo(servicescard,{xPercent: null, opacity:0},{xPercent: null, opacity:1});
     }});
@@ -150,6 +152,7 @@ function animatemenu(){
   gsap.to(servicescard,{opacity:0, duration: 1, onComplete:function() {
     displayservicemenu();
     gsap.fromTo(servicescard,{xPercent: 70},{xPercent: null, opacity:1, duration: 1.2});
+    gsap.fromTo(backmenu,{scale:0, opacity:0},{scale:1,opacity:1,delay:1});
   }});
 }
 
@@ -195,5 +198,15 @@ function displayservicemenu(){
       arrOfServImgtags[i].classList.remove('diss');
       arrOfA1tags[i].style.display = "inline-block"
     }
+  }
+}
+
+// responsive
+// responsive();
+function responsive() {
+  if (screen.width >= 600) { // If media query matches
+    document.body.style.backgroundColor = "yellow";
+  } else {
+    document.body.style.backgroundColor = "pink";
   }
 }

@@ -1,4 +1,6 @@
-<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 49L49 0.999998" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M1.00049 1L49.0005 49" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="back">
+<path id="Line 1" d="M2 50L50 2" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path id="Line 2" d="M2.00049 2L50.0005 50" stroke="white" stroke-width="4" stroke-linecap="round"/>
+</g>
 </svg>

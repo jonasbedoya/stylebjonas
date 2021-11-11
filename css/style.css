@@ -19,7 +19,7 @@
 }
 @media screen and (max-width: 800px) {
     :root {
-        --margin: 4%;
+        /* --margin: 4%; */
     }
 }
 
@@ -41,8 +41,9 @@ h1{
 /*     font-size: clamp(1.8rem, 7vw, 3rem);  
     font-size: clamp(2rem, 7vw, 3.6rem); */
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
+    margin-top: auto;
+    bottom: 0%;
+    text-align: center;
 }
 p{
     color: var(--color-white);
@@ -197,7 +198,8 @@ main h6{
     grid-column: 1/13;
     grid-row: 3;
     height: auto;
-    grid-template-rows: 1fr;
+    min-height: 100vh;
+    grid-template-rows: 10% 90%;
     /* animation */
     grid-template-columns:  var(--margin) 1fr 1fr 1fr var(--margin);
     /* decor */
@@ -208,11 +210,9 @@ main h6{
 }
 
 .services h1{
-    float: right;
     border: var(--border);
     grid-column: 4;
     grid-row: 1;
-    margin-top: 5%;
 }
 .services h3{
     margin: 0;
@@ -231,11 +231,12 @@ main h6{
     grid-template-rows: repeat(3, 1fr);
     /* decor */
     background: linear-gradient(228.04deg, rgba(24, 102, 113, 0.72) 26.33%, rgba(51, 150, 137, 0.85) 92.46%), #000000;    /* background: linear-gradient(180deg, rgba(24, 102, 113, 0.8) 0%, #339689 100%), #000000; */
+    
     /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(180deg, #0E4951 0%, rgba(14, 73, 81, 0) 100%), linear-gradient(140.4deg, #0E4951 20.13%, rgba(14, 73, 81, 0) 77.37%), radial-gradient(68.2% 215.56% at 5.74% 120.14%, rgba(150, 166, 50, 0) 17.19%, rgba(150, 166, 50, 0.79) 36.09%, rgba(150, 166, 50, 0) 55.21%), linear-gradient(252.44deg, #2FBFA5 0%, #21777A 100%), linear-gradient(0deg, #0E4951, #0E4951);    background: linear-gradient(334.11deg, rgba(15, 115, 104, 0.5) 0%, rgba(140, 116, 23, 0.36) 46.88%, rgba(15, 115, 104, 0.25) 100%);; */
     border: var(--border);
     /* border-top: 0.1px solid rgba(255, 255, 255, 0.001); */
     /* padding: 5% 0%; */
-    padding: clamp(30px,4%,40px) 0%;
+    padding: clamp(35px,4%,40px) 0%;
 }
 
 .services_card>section{
@@ -307,6 +308,8 @@ main h6{
     background-size: contain;
     height: 20%;
     width: 20%;
+    margin-top: -20%;
+    margin-right: -20%;
     animation: show 1s;
     border: var(--border);
 }
@@ -331,6 +334,8 @@ a2{
     display: grid;
     grid-template-columns: var(--margin) 1fr 1fr 1fr var(--margin);
     grid-template-rows: auto;
+    height: auto;
+    min-height: 100vh;
     /*  */
     margin: 3% 0%;
     border: var(--border);
@@ -521,78 +526,7 @@ footer{
     }
     to{
         opacity: 1;
-    }
-}
-@keyframes treatmentsshow{
-    from{
-        grid-column: 2;
-        /* opacity: 0; */
-    }
-    25%{
-        /* opacity: 0; */
-        /* transform: translateX(5%); */
-    }
-    75%{
-        /* opacity: 0; */
-        /* transform: translateX(0%); */
-    }
-    to{
-        grid-column: 3/10;
-        /* opacity: 1; */
-    }
-}
-@keyframes treatmentsmove{
-    from{
-        grid-column: 3/10;
-        /* opacity: 0; */
-    }
-    25%{
-        /* opacity: 0; */
-        /* transform: translateX(-5%); */
-    }
-    75%{
-        /* opacity: 0; */
-        /* transform: translateX(2%); */
-    }
-    to{
-        grid-column: 2;
-        /* opacity: 1; */
-    }
-}
-@keyframes colormove{
-    from{
-        grid-column: 4/11;
-        /* opacity: 0; */
-    }
-    25%{
-        /* opacity: 0; */
-        /* transform: translateX(-5%); */
-    }
-    75%{
-        /* opacity: 0; */
-        /* transfo/rm: translateX(2%); */
-    }
-    to{
-        grid-column: 3;
-        /* opacity: 1; */
-    }
-}
-@keyframes colorshow{
-    from{
-        grid-column: 3;
-        /* opacity: 0; */
-    }
-    25%{
-        /* opacity: 0; */
-        /* transform: translateX(5%); */
-    }
-    75%{
-        /* opacity: 0; */
-        /* transform: translateX(0%); */
-    }
-    to{
-        grid-column: 4/11;
-        /* opacity: 1; */
+        transform: translateX(-50%);
     }
 }
 /* list prices */
@@ -661,7 +595,7 @@ hs33{
     background: rgba(0, 0, 0, 0.4);
 }
 .services_card_sect.active{
-    padding: 8% 10%;
+    /* padding: 8% 10%; = */ 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -669,30 +603,34 @@ hs33{
     grid-column: 1/-1;
     padding: 0%;
 }
-.halist_prices>article, .trlist_prices>article,.colist_prices>article{
-    margin: auto;
-}
+
 
 .halist_prices>article>hs1, .halist_prices>article>hs10, .halist_prices>article>hs11, .trlist_prices>article>hs2, .trlist_prices>article>hs20, .trlist_prices>article>hs22, .colist_prices>article>hs3, .colist_prices>article>hs33{
     display: block;
-    animation: show 1s;    
+    animation: show 1s;  
     border: var(--border);
+}
+.halist_prices>article, .trlist_prices>article,.colist_prices>article{
+    margin: 0% auto;
 }
 .halist_prices, .trlist_prices, .colist_prices{
     /* background: rgba(0, 0, 0, 0.6); */
-    grid-column: 1/-1;
+    grid-column: 2/-2;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     grid-row: 2;
+
+    justify-content: center;
+    flex-direction: column;
+
     height: auto;
     width: 100%;
-    flex-direction: column;
     background: rgba(0, 0, 0, 0.4);
-    /* here-s the key for height */
-    padding: 100px 0%;
-    margin: auto;
     border: var(--border);
 }
-.list_prices{
+section>.list_prices{
     display: none;
+    padding: 8% 0%;
 }
 .halist_prices{
 }

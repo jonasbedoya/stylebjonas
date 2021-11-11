@@ -239,6 +239,7 @@ main h6{
     /*  */
     grid-column: 1/-1;
     height: auto;
+    min-height: 70vh;
     /* display: grid;
     grid-template-columns: var(--margin) repeat(9,1fr) var(--margin);
     grid-template-rows: repeat(3, 1fr); */
@@ -356,11 +357,8 @@ main h6{
         grid-row: 3;
         margin: auto;
     }
-    .services{
-        min-height: 70vh;
-    }
     .services_card>section{
-        padding: 0%;
+        padding: 10%;
     }
 }
 /* animations */

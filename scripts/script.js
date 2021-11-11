@@ -88,9 +88,9 @@ function colorlistshow(){
 // funcs
 function backtomenuanimate(){
     // animation
-    gsap.to(servicescard,{xPercent: -100, opacity:0, duration:1.5, onComplete:function() {
-      gsap.fromTo(servicescard,{xPercent: 'none', opacity:0, duration:1},{xPercent: 'none', opacity:1, duration:1});
+    gsap.to(servicescard,{xPercent: -70, opacity:0, duration:0.8, onComplete:function() {
       backtomenu();
+      gsap.fromTo(servicescard,{xPercent: null, opacity:0},{xPercent: null, opacity:1});
     }});
 }
 
@@ -101,7 +101,6 @@ function backtomenu(){
 
   servicescard.style.paddingBottom = null;
   servicescard.style.gridTemplateRows = null;
-
 
   haircutbutton.style.color = haircolor;
   treatmentsbutton.style.color = haircolor;
@@ -149,8 +148,8 @@ function backtomenu(){
 function animatemenu(){
   // animation
   gsap.to(servicescard,{opacity:0, duration: 1, onComplete:function() {
-    gsap.fromTo(servicescard,{xPercent: 100, opacity:1},{xPercent: 'none', duration: 1.8});
     displayservicemenu();
+    gsap.fromTo(servicescard,{xPercent: 70},{xPercent: null, opacity:1, duration: 1.2});
   }});
 }
 

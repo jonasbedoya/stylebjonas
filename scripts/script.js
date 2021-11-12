@@ -168,11 +168,15 @@ function displayservicemenu(){
   haircutbutton.style.margin = 'auto';
   treatmentsbutton.style.margin = 'auto';
   colorbutton.style.margin = 'auto';
+  haircutbutton.style.wordSpacing = null;
+  treatmentsbutton.style.wordSpacing = null;
+  colorbutton.style.wordSpacing = null;
+
 
   servicescard.style.padding = '4% 0%';
   servicescard.style.display = 'grid';
-  servicescard.style.gridTemplateColumns = 'var(--margin) repeat(3, 1fr) var(--margin)';
-  servicescard.style.gridTemplateRows = '65px 90%';
+  servicescard.style.gridTemplateColumns = 'repeat(3, 1fr)';
+  servicescard.style.gridTemplateRows = '70px auto';
   servicescard.style.background = 'none';
 
   haircutgrid.style.margin = '0%';
@@ -183,19 +187,19 @@ function displayservicemenu(){
   backmenu.style.display = 'block';
   if (!haircutgrid.classList.contains('active')){
     haircutgrid.classList.add('active');
-    haircutgrid.style.gridColumn = '2';
+    haircutgrid.style.gridColumn = '1';
     haircutgrid.style.gridRow = '1';
   } 
   if (!treatmentsgrid.classList.contains('active')){
     treatmentsgrid.classList.add('active');
     // treatmentsgrid.style.animation = 'erase 2s ease-in-out';
-    treatmentsgrid.style.gridColumn = '3';
+    treatmentsgrid.style.gridColumn = '2';
     treatmentsgrid.style.gridRow = '1';
   } 
   if(!colorgrid.classList.contains('active')){
     colorgrid.classList.add('active');
     // colorgrid.style.animation = 'erase 2s ease-in-out';
-    colorgrid.style.gridColumn = '4';
+    colorgrid.style.gridColumn = '3';
     colorgrid.style.gridRow = '1';
   } 
 // erase everything useless

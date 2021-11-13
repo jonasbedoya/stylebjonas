@@ -173,7 +173,7 @@ function displayservicemenu(){
   colorbutton.style.wordSpacing = null;
 
 
-  servicescard.style.padding = '4% 0%';
+  servicescard.style.padding = '1% 0%';
   servicescard.style.display = 'grid';
   servicescard.style.gridTemplateColumns = 'repeat(3, 1fr)';
   servicescard.style.gridTemplateRows = '70px auto';

@@ -7,10 +7,10 @@
 }
 :root {
     /* margins */
-    --margin: 10%;
+    --margin: 0.2fr;
     --padding-grid: 5%;
     /* border */
-    --show: 0px;
+    --show:0px;
     --border: var(--show) solid #ff4ee1;
     --border-section: var(--show) solid #ffc3f5;
     /* colors */
@@ -20,7 +20,7 @@
 }
 @media screen and (max-width: 800px) {
     :root {
-        --margin: 4%;
+        --margin: 0.05fr;
     }
 }
 body{
@@ -36,19 +36,21 @@ body{
 /* Principal Titles */
 h1{
     /* color: rgba(15, 74, 70, 0.673); */
-    background: linear-gradient(180deg,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4));
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.4));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
     font-weight: 600;
     font-family: 'Della Respira', serif;
-    font-size: clamp(30px, 3vw, 3.3rem); 
-    letter-spacing: 10px;
+    font-size: clamp(2.15rem, 0.9387rem + 1.1613vw, 2.1rem);
+    /* font-size: clamp(2rem, 1.7460rem + 1.1290vw, 2.875rem); */
+    letter-spacing: 6px;
     text-transform: uppercase;
 }
 p{
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-size: clamp(0.8rem, 2.2vw, 1.4rem); 
+    /*  */
+    font-size: clamp(1rem, 1.0704rem + 0.2426vw, 1.313rem);
     font-weight: 200;
     border: var(--border);
 }
@@ -56,8 +58,9 @@ p1{
     display: block;
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    font-size: clamp(1rem, 1.0704rem + 0.2426vw, 1.313rem);
     font-weight: 200; 
+    margin-bottom: 5%;
     border: var(--border);
 }
 
@@ -67,7 +70,7 @@ h3{
     font-family: 'Urbanist', sans-serif;
     font-weight: 500;
     letter-spacing: 1.5px;
-    font-size: clamp(1.2rem, 1.8vw, 1.7rem); 
+    font-size: clamp(1.2rem, 1.0704rem + 0.2426vw, 1.313rem);
     text-transform: uppercase;
     padding: 0%;
     border: var(--border);
@@ -98,17 +101,6 @@ a1{
 }
 a1:hover{
     background: rgba(255, 255, 255, 0.15);
-}
-@media screen and (max-width: 500px) {
-    h3{
-        letter-spacing: 0.2px;
-        font-size: clamp(0.9rem, 2.2vw, 1.7rem); 
-    }
-    p{
-        font-size: clamp(0.7rem, 1.8vw, 1.4rem); 
-        font-weight: 200;
-        border: var(--border);
-    }
 }
 
 /* Displaying */
@@ -219,7 +211,7 @@ main h6{
     background: linear-gradient(228.04deg, rgba(24, 102, 113, 0.4) 26.33%, rgba(51, 150, 137, 0.7) 92.46%),rgba(0, 0, 0, 0.2);    /* background: linear-gradient(180deg, rgba(24, 102, 113, 0.8) 0%, #339689 100%), #000000; */
 }
 
-.services h1{
+.services>h1{
     border: var(--border);
     grid-column: 1;
     grid-row: 1/-1;
@@ -228,18 +220,14 @@ main h6{
     text-align: center;
     /* font-size: 3vw; */
     margin: 0% 0% auto auto;
-    letter-spacing: clamp(1em,5vw,20px);
     writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    
+    transform: rotate(180deg);  
 }
 .services h3{
     margin: 0;
     border: var(--border);
 }
-.services p{
-    border: var(--border);
-}
+
 
 .services_card{
     /*  */
@@ -329,27 +317,73 @@ main h6{
     height: 1em;
     width: 1em;
     grid-row: 1;
-    grid-column: 4;
-    margin-top: -50%;
-    margin-left: 10%;
+    grid-column: 3;
+    margin: 0% 0% auto auto;
     border: var(--border);
 }
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 500px) {
+    .services{
+        grid-template-columns:  var(--margin) auto 1fr 1fr 1fr var(--margin);
+        grid-template-rows: 80px auto;
+    }
+    .services>h1{
+        border: var(--border);
+        grid-column: 2/-2;
+        grid-row: 1;
+        display: flex;
+        margin: auto 0% 0% auto;
+        writing-mode: horizontal-tb;
+        transform: none;  
+    }
+    .services_card{
+        grid-column: 2/-2;
+        grid-row: 2;
+        display: flex;
+        padding: 0% var(--margin);
+        border: var(--border);
+        margin: 2% 0% 5% 0%;
+    }
+    .services_card_sect{
+        background: rgba(38, 35, 4, 0.3);
+        border-radius: 15px;
+    }
     .haircut{
         margin: 0% auto;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
     }
     .treatments{
         margin: 0% auto;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
     }
     .color{
         margin: 0% auto;
     }
     .services_card>section{
-        padding: 0%;
+        padding: 5% 0%;
     }
+    .article_img_haircut, .article_img_treatment, .article_img_color{
+        grid-column: 1/-1;
+        grid-row: 1;
+    }
+    .div_img{
+        background-position: center;
+        border-right: none;
+        height: 160px;
+        margin: 5% 0% 10% 0%;
+    }
+    .services_card_sect>article{
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-left: 0%;
+        margin: auto 0%;
+        border: var(--border);
+    }
+    .services p1, .services h3, .services a1{
+        margin: 0% 6% 0.5% 6%;
+    }
+    
 }
 
 /* animations */
@@ -378,14 +412,13 @@ a2{
     margin: 5% 0%;
     border: var(--border);
 }
-.season_promotions h1{
+.season_promotions>h1{
     border: var(--border);
 }
 .season_promotions>h1:first-child{
     grid-column: 1;
     grid-row: 2;
     margin: 0% 0% auto auto;
-    letter-spacing: clamp(1em,5vw,20px);
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
@@ -393,7 +426,6 @@ a2{
     grid-column: 2/5;
     grid-row: 1;
     margin: auto;
-    letter-spacing: clamp(1em,5vw,20px);
 }
 .season_promotions h3{
     margin: 0% 6% 0% 6%;
@@ -464,28 +496,35 @@ a2{
 .card_img_kera{
     background-image: url('/css/svg/keratina.svg');
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     .season_promotions{
         padding:5% 0%;
     }
     .season_promotions section{
         flex-direction: column;
+        margin-top: 5%;
+    }
+    .season_promotions>section{
+        background: transparent;
     }
     .card{
         /* grid */
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        height:200px;
+        display: flex;
+        grid-column: 2/5;
+        flex-direction: column;
+        height:auto;
         width: auto;
         /* decor */
         text-align: left;
-        padding: 3%;
-        margin: 2%;
+        padding: 5% 0%;
+        margin: 0% 0% 5% 0%;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
     }
     .card>h3{
         /* decor */
         font-size: clamp(1.2rem, 2.3vw, 4rem); 
+        margin-bottom: 2%;
         border: var(--border);
     }
     .card>p{
@@ -495,19 +534,40 @@ a2{
     }
     .card>section{
         /* positioning */
-        grid-column: 2;
-        grid-row: 1/-1;
         display: flex;
         justify-content:center;
         /* decor */
         margin: 0%;
-        border-left: 1px solid rgba(255, 255, 255, 0.425);
+        /* border-left: 1px solid rgba(255, 255, 255, 0.425); */
+    }
+    .card{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.425);
     }
     .card_img_flam,.card_img_rehab, .card_img_kera{
-        grid-column: 1;
-        grid-row: 1/-1;
         border: var(--border);
-        margin: 12%;
+        height: 160px;
+        width: 100%;
+        margin: 5% 0% 7% 0%;
+        padding: 0%;
+    }
+    .season_promotions>h1:first-child{
+        grid-column: 2/5;
+        grid-row: 1;
+        margin: 0% auto auto 0%;
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+    .season_promotions>h1:nth-child(2){
+        grid-column: 2/5;
+        grid-row: 2;
+        margin: auto 0% 0% auto ;
+    }
+    .card:nth-child(2){
+        border-left: none;
+        border-right: none;
+    }
+    .season_promotions>section{
+        grid-row: 3;
     }
 
 }
@@ -562,6 +622,12 @@ a2{
     flex-direction: column;
     justify-content: center;
     /* font-size: clamp(2rem, 4vw, 5rem);  */
+}
+@media screen and (max-width: 500px) {
+    .worktime{
+        /* template */
+        grid-template-columns: 1fr;
+    }    
 }
 /* footer */
 footer{

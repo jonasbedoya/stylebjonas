@@ -185,22 +185,35 @@ function displayservicemenu(){
 
   haircutlist.style.display = 'flex'
   backmenu.style.display = 'block';
+
   if (!haircutgrid.classList.contains('active')){
     haircutgrid.classList.add('active');
     haircutgrid.style.gridColumn = '1';
     haircutgrid.style.gridRow = '1';
+    if (screen.width <= 500) { // If media query matches
+      haircutgrid.style.gridColumn = '1/-1';
+      haircutgrid.style.gridRow = '1';
+    }
   } 
   if (!treatmentsgrid.classList.contains('active')){
     treatmentsgrid.classList.add('active');
     // treatmentsgrid.style.animation = 'erase 2s ease-in-out';
     treatmentsgrid.style.gridColumn = '2';
     treatmentsgrid.style.gridRow = '1';
+    if (screen.width <= 500) { // If media query matches
+      treatmentsgrid.style.gridColumn = '1/-1';
+      treatmentsgrid.style.gridRow = '2';
+    }
   } 
   if(!colorgrid.classList.contains('active')){
     colorgrid.classList.add('active');
     // colorgrid.style.animation = 'erase 2s ease-in-out';
     colorgrid.style.gridColumn = '3';
     colorgrid.style.gridRow = '1';
+    if (screen.width <= 500) { // If media query matches
+      colorgrid.style.gridColumn = '1/-1';
+      colorgrid.style.gridRow = '3';
+    }
   } 
 // erase everything useless
   if (haircutgrid.classList.contains('active')){
@@ -222,7 +235,7 @@ function displayservicemenu(){
 // responsive
 // responsive();
 function responsive() {
-  if (screen.width >= 600) { // If media query matches
+  if (screen.width <= 500) { // If media query matches
     document.body.style.backgroundColor = "yellow";
   } else {
     document.body.style.backgroundColor = "pink";

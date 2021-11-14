@@ -10,7 +10,7 @@
     --margin: 0.2fr;
     --padding-grid: 5%;
     /* border */
-    --show: 1px;
+    --show: 0px;
     --border: var(--show) solid #ff4ee292;
     --border-section: var(--show) solid #ffc3f5;
     /* colors */
@@ -35,10 +35,7 @@ body{
 }
 /* Principal Titles */
 h1{
-    /* color: rgba(15, 74, 70, 0.673); */
-    background: linear-gradient(180deg,rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.4));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    
+    color: rgba(198, 198, 198, 0.673);
     font-weight: 600;
     font-family: 'Della Respira', serif;
     font-size: clamp(1.9rem, 1.1706rem + 3.6471vw, 5rem);
@@ -586,9 +583,6 @@ a2{
 }
 .worktime>article:first-child>h1{
     /* positioning */
-    background: linear-gradient(180deg,rgba(252, 252, 252, 0.6),rgba(255, 255, 255, 0.4));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    
     display: flex;
     text-align: end;
     /* decor */

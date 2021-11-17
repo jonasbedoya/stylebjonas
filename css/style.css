@@ -42,8 +42,8 @@ h1{
     color: var(--color-white-decor);
     font-weight: 600;
     font-family: 'Della Respira', serif;
-     /* CLAMP 375px*/
-    font-size: 36px;
+     /* CLAMP 320px*/
+     font-size: 32px;
     /* font-size: 36px; */
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -51,28 +51,28 @@ h1{
 p{
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-     /* CLAMP 375px*/
+     /* CLAMP 320px*/
      font-size: 17px;
     /* font-size: 17px; */
     font-weight: 300;
     border: var(--border);
 }
 .card_testimonials>p{
-    /* CLAMP 375px*/
+     /* CLAMP 320px*/
     /* font-size: 16px; */
-    font-size: 16px;
+    font-size: 14px;
 }
 .card_testimonials>h3{
-    /* CLAMP 375px*/
+     /* CLAMP 320px*/
     /* font-size: 17px; */
-    font-size: 17px;
+    font-size: 15px;
 }
 p1{
     display: block;
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-     /* CLAMP 375px*/
-    font-size: 17px;
+     /* CLAMP 320px*/
+     font-size: 17px;
     font-weight: 200; 
     margin-bottom: 5%;
     border: var(--border);
@@ -106,7 +106,7 @@ h6{
 }
 .slide_1>h6{
     /* CLAMP 375px*/
-    font-size: 65px;
+    font-size: 54px;
     /* font-size: 65px; */
     margin: 0%;
 }
@@ -135,7 +135,7 @@ main{
     grid-row: 1;
     height: 100vh;
     position: relative;
-    min-height: 600px;
+    min-height: 500px;
     /* bg */
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/css/img/background.jpg');
     background-position: 100% 30%;
@@ -652,9 +652,11 @@ a2{
     }
     .worktime>article:first-child>h1:nth-child(1){
         margin-right: 2%;
+        margin-bottom: 1%;
     }
     .worktime>article:first-child>h1:nth-child(2){
         margin-left: 2%;
+        margin-bottom: 1%;
     }
     .worktime>article:nth-child(2){
         grid-column: 1/-1;

@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- slider -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <title>StyleBjonas</title>
@@ -12,8 +17,48 @@
 <body>
     <main>
         <img src="/css/img/StyleBjonasLogoFei.png" alt="Logo">
-        <h6>Revitalize your <h7 id="welcome">beauty</h7></h6>
+        <!-- slider -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide slide_1">
+                <h6>Revitalize your <h6 id="changeword">beauty</h6></h6> 
+              </div>
+              <div class="swiper-slide slide_2">
+                <h6>Happy clienteles</h6>
+                <article class="happy_clienteles"></article>
+              </div>
+              <div class="swiper-slide slide_3">
+                <article class="card_testimonials">
+                    <h3>Balayage</h3>
+                    <p>Best balayage I had so far! Nice highlighting and transition to natural hair color. Recommend :)</p>
+                    <p>★★★★★</p>
+                </article>
+                <article class="card_testimonials">
+                    <h3>Ladies' Haircuts</h3>
+                    <p>Jonas was very nice! He gave me the best head massage when washing my hair. Took the time for me and felt very professional. Will definitely come back!</p>
+                    <p>★★★★★</p>
+                </article>
+                <article class="card_testimonials">
+                    <h3>Men's Haircut</h3>
+                    <p>Very relaxed and comfortable atmosphere. I felt very at ease and Jonas did a great job!</p>
+                    <p>★★★★★</p>
+                </article>
+                <h6>Testimonials</h6>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        <!-- slider -->
     </main>
+
     <!-- <section class="intro">
         <div class="intro_img"></div>
         <div>
@@ -27,7 +72,7 @@
     <section class="services">
         <h1>Services</h1>
         <!-- <section class="services_card services_animation"> -->
-        <section id="services_card_grid" class="services_card services_card_masked">
+        <section id="services_card_grid" class="services_card">
             <a2 id="serv_back"></a2>
             <section id="haircut_list_prices" class="list_prices">
                 <article>
@@ -157,8 +202,15 @@
         </section>
     </section>
     <footer>
-        <h1>Footer</h1>
+        <article>
+            <h1>See you soon!</h1>
+            <p>Amsterdam West</p>
+            <p>Bos en Lommer</p>
+            <p>Copyright 2021 StyleBjonas. All Rights Reserved. Site by Waves.</p>    
+        </article>
     </footer>
+    <!-- slider -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/scripts/script.js"></script>
 </body>
 </html>

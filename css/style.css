@@ -104,25 +104,25 @@ main{
     grid-column: 1 / -1;
     grid-row: 1;
     height: auto;
+    position: relative;
     min-height: 100vh;
-    /* border: var(--border-section); */
-    /* grid layout */
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 20% 1fr 20%;
-    /* decor */
+    /* bg */
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/css/img/background.jpg');
     background-position: 100% 30%;
     background-size: cover;
+    /* positioning */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 main img{
-    grid-column: 1 / 4;
-    grid-row: 1;
     height: auto;
     width: 180px;
-    display: block;
-    margin: auto;
+    display: flex;
+    margin: 5% auto 0%;
+    border: var(--border);
+    flex: 0;
 }
 main a{
     grid-column: 2 / 3;
@@ -150,18 +150,6 @@ main a h2{
     border: linear-gradient(96.41deg, #B69D40 0%, rgba(57, 76, 78, 0.5) 100%);
 }
 
-main h6{
-    grid-column: 1 / 4;
-    grid-row: 2;
-    /* border: var(--border); */
-    display: block;
-    padding: 0%;
-    margin: 0%;
-    /*center vertically*/
-    position: relative;
-    top: 50%;
-    transform: translateY(-20%);
-}
 
 /* intro */
 .intro{
@@ -294,13 +282,11 @@ main h6{
     background-size: 50%;
     height: 1em;
     width: 1em;
+    order: 4;
     grid-row: 1;
     grid-column: 3;
     margin: 0% 0% auto auto;
     border: var(--border);
-}
-@media screen and (max-width: 1000px) {
-    
 }
 @media screen and (max-width: 500px) {
     .services{
@@ -317,9 +303,8 @@ main h6{
         transform: none;  
     }
     .services_card{
-        grid-column: 2/-2;
-        grid-row: 2;
         display: flex;
+        flex-direction: column-reverse;
         padding: 0% var(--margin);
         border: var(--border);
         margin: 2% 0% 5% 0%;
@@ -329,14 +314,17 @@ main h6{
         border-radius: 40px;
     }
     .haircut{
+        order: 3;
         margin: 0% auto;
         margin-bottom: 5%;
     }
     .treatments{
+        order: 2;
         margin: 0% auto;
         margin-bottom: 5%;
     }
     .color{
+        order: 1;
         margin: 0% auto;
     }
     .services_card>section{
@@ -643,13 +631,7 @@ a2{
     }
         
 }
-/* footer */
-footer{
-    grid-column: 1/13;
-    grid-row: 6;
-    height: 180px;
-    background: rgba(0, 0, 0, 0.712);
-}
+
 
 /* ANIMATIONS */
 @keyframes show{
@@ -839,4 +821,93 @@ section>.list_prices{
         padding-bottom: 1%;
         border: var(--border);
     }
+}
+
+/* footer */
+footer{
+    grid-column: 1/13;
+    grid-row: 6;
+    height: 180px;
+    background: rgba(0, 0, 0, 0.712);
+    border: var(--border);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer>article{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+footer>article>h1{
+    text-transform: none;
+}
+
+/* slider */
+.swiper{
+    display: flex;
+    flex: auto;
+    height: 500px;
+    width: 100%;
+    margin: 2% 0%;
+}
+/* first slider */
+.slide_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slide_1>h6{
+    word-spacing: 100vh;
+    font-size: 3.8rem;
+}
+/* second slider */
+.slide_2{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+.card_testimonials{
+    border-radius: 15px;
+    padding: 2%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+}
+.card_testimonials:nth-child(1){
+    margin: auto 9% 0%;
+}
+.card_testimonials:nth-child(2){
+    margin: 5% 9%;
+}
+.card_testimonials:nth-child(3){
+    margin: 0% 9% auto;
+}
+.starts_test{
+    background-image: none;
+}
+/* third slider */
+.slide_3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.happy_clienteles{
+    background-image: url('/css/img/clientblonde.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex: 1;
+    margin: 9%;
+}
+/* decor */
+:root {
+    --swiper-theme-color: rgba(0, 0, 0, 0.541);
+}
+
+#changeword{
+    opacity: 1;
 }

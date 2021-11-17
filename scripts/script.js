@@ -1,12 +1,4 @@
-let intro = document.getElementById('welcome');
-function Switch() {
-  intro.style.opacity = 0;
-  intro.innerHTML = 'soul';
-  console.log(intro.innerHTML);
-  intro.style.opacity = 1;
-}
 
-setTimeout('Switch()', 10000);
 // consts
 // menu prices
 let hmenu = document.getElementById('haircut_menu');
@@ -114,7 +106,7 @@ function backtomenu(){
   haircutlist.classList.remove('trlist_prices');
   haircutlist.classList.remove('colist_prices');
 
-  servicescard.style.display = 'flex';
+  servicescard.style.display = null;
   servicescard.style.gridTemplateColumns = null;
   servicescard.style.gridTemplateRows = null;
 
@@ -151,14 +143,14 @@ function backtomenu(){
         arrOfA1tags[i].style.display = "inline-block"
       }
   }
-  backmenu.style.display = 'none';
-  haircutlist.style.display = 'none';
+  backmenu.style.display = null;
+  haircutlist.style.display = null;
 }
 function animatemenu(){
   // animation
   gsap.to(servicescard,{opacity:0, duration: 1, onComplete:function() {
     displayservicemenu();
-    gsap.fromTo(servicescard,{xPercent: 70},{xPercent: null, opacity:1, duration: 1.2});
+    gsap.fromTo(servicescard,{xPercent: 70,duration: 1.2},{xPercent: null, opacity:1, duration: 1.2});
     gsap.fromTo(backmenu,{scale:0, opacity:0},{scale:1,opacity:1,delay:1});
   }});
 }
@@ -172,12 +164,13 @@ function displayservicemenu(){
   treatmentsbutton.style.wordSpacing = null;
   colorbutton.style.wordSpacing = null;
 
-
-  servicescard.style.padding = '1% 0%';
-  servicescard.style.display = 'grid';
-  servicescard.style.gridTemplateColumns = 'repeat(3, 1fr)';
-  servicescard.style.gridTemplateRows = '70px auto';
-  servicescard.style.background = 'none';
+ if(screen.width > 500){
+    servicescard.style.padding = '1% 0%';
+    servicescard.style.display = 'grid';
+    servicescard.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    servicescard.style.gridTemplateRows = '70px auto';
+    servicescard.style.background = 'none';  
+  }
 
   haircutgrid.style.margin = '0%';
   treatmentsgrid.style.margin = '0%';
@@ -189,7 +182,7 @@ function displayservicemenu(){
   if (!haircutgrid.classList.contains('active')){
     haircutgrid.classList.add('active');
     haircutgrid.style.gridColumn = '1';
-    haircutgrid.style.gridRow = '1';
+    haircutgrid.style.gridRow = '1';  
     if (screen.width <= 500) { // If media query matches
       haircutgrid.style.gridColumn = '1/-1';
       haircutgrid.style.gridRow = '1';
@@ -197,23 +190,22 @@ function displayservicemenu(){
   } 
   if (!treatmentsgrid.classList.contains('active')){
     treatmentsgrid.classList.add('active');
-    // treatmentsgrid.style.animation = 'erase 2s ease-in-out';
     treatmentsgrid.style.gridColumn = '2';
-    treatmentsgrid.style.gridRow = '1';
+    treatmentsgrid.style.gridRow = '1';  
     if (screen.width <= 500) { // If media query matches
       treatmentsgrid.style.gridColumn = '1/-1';
       treatmentsgrid.style.gridRow = '2';
-    }
+    } 
   } 
   if(!colorgrid.classList.contains('active')){
     colorgrid.classList.add('active');
-    // colorgrid.style.animation = 'erase 2s ease-in-out';
     colorgrid.style.gridColumn = '3';
-    colorgrid.style.gridRow = '1';
+    colorgrid.style.gridRow = '1';  
+
     if (screen.width <= 500) { // If media query matches
       colorgrid.style.gridColumn = '1/-1';
       colorgrid.style.gridRow = '3';
-    }
+    } 
   } 
 // erase everything useless
   if (haircutgrid.classList.contains('active')){
@@ -241,3 +233,47 @@ function responsive() {
     document.body.style.backgroundColor = "pink";
   }
 }
+
+
+// slider
+const swiper = new Swiper('.swiper', {
+  // Navigation arrows
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  // And if we need scrollbar
+  scrollbar: {
+      el: '.swiper-scrollbar',
+  }
+  // ,autoplay: {
+  //   delay: 5000,
+  // }
+});
+// slide1 animation
+const changeword = document.getElementById('changeword');
+let texts = ['beauty','soul']
+
+
+window.onload = function() {
+
+  const maxTlSlide1 = new TimelineMax({repeat: -1});
+
+    const tlSlide1 = new TimelineMax({repeat:1})
+    .fromTo(changeword, 3,{opacity:0, onComplete:function() {
+        changeword.innerHTML = texts[0];
+    }}, {opacity:1})
+    .to(changeword, 2,{opacity:0, onComplete:function() {
+        changeword.innerHTML = texts[1];
+    }})
+    .to(changeword, 3, {opacity:1})
+    .to(changeword, 2, {opacity:0, onComplete:function() {
+      changeword.innerHTML = texts[0];
+    }})
+    maxTlSlide1.add(tlSlide1);
+};
+
+

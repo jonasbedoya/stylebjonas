@@ -54,7 +54,7 @@ p{
      /* CLAMP 375px*/
      font-size: 17px;
     /* font-size: 17px; */
-    font-weight: 200;
+    font-weight: 300;
     border: var(--border);
 }
 .card_testimonials>p{
@@ -135,7 +135,7 @@ main{
     grid-row: 1;
     height: 100vh;
     position: relative;
-    min-height: 650px;
+    min-height: 600px;
     /* bg */
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/css/img/background.jpg');
     background-position: 100% 30%;

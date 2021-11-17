@@ -14,9 +14,13 @@
     --border: var(--show) solid #ff4ee292;
     --border-section: var(--show) solid #ffc3f5;
     /* colors */
-    --color-white: rgba(255, 255, 255, 0.8);
-    --color-white-decor: rgba(255, 255, 255, 0.4);
+    --color-white: rgba(255, 255, 255, 0.95);
+    --color-white-decor: rgba(255, 255, 255, 0.7);
     --bg: #FFFF;
+    /* services decor */
+    --services-card-res: rgba(4, 38, 15, 0.3);
+    --treatments-card-res: rgba(38, 35, 4, 0.3);
+
 }
 @media screen and (max-width: 800px) {
     :root {
@@ -35,7 +39,7 @@ body{
 }
 /* Principal Titles */
 h1{
-    color: rgba(198, 198, 198, 0.673);
+    color: var(--color-white-decor);
     font-weight: 600;
     font-family: 'Della Respira', serif;
     font-size: clamp(1.9rem, 1.1706rem + 3.6471vw, 5rem);
@@ -64,8 +68,8 @@ p1{
 h3{
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-weight: 500;
-    letter-spacing: 1.5px;
+    font-weight: 550;
+    letter-spacing: 2px;
     font-size: clamp(1.2rem, 1.0704rem + 0.2426vw, 1.313rem);
     text-transform: uppercase;
     padding: 0%;
@@ -75,8 +79,8 @@ h4{
     color: black;
 }
 h6{
+    color: var(--color-white);
     font-family: 'La Belle Aurore', cursive;
-    color: rgba(249, 242, 242);
     font-size: clamp(1rem, 10vw, 6rem); 
     font-weight: normal;
     text-align: center;
@@ -103,9 +107,9 @@ a1:hover{
 main{
     grid-column: 1 / -1;
     grid-row: 1;
-    height: auto;
+    height: 100vh;
     position: relative;
-    min-height: 100vh;
+    min-height: 670px;
     /* bg */
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/css/img/background.jpg');
     background-position: 100% 30%;
@@ -290,8 +294,9 @@ main a h2{
 }
 @media screen and (max-width: 500px) {
     .services{
-        grid-template-columns:  var(--margin) 1fr 1fr 1fr var(--margin);
+        grid-template-columns: var(--margin) 1fr 1fr 1fr var(--margin);
         grid-template-rows: 80px auto;
+        background: transparent;
     }
     .services>h1{
         border: var(--border);
@@ -305,12 +310,12 @@ main a h2{
     .services_card{
         display: flex;
         flex-direction: column-reverse;
-        padding: 0% var(--margin);
+        padding: 5% 0%;
         border: var(--border);
         margin: 2% 0% 5% 0%;
     }
     .services_card_sect{
-        background: rgba(38, 35, 4, 0.3);
+        background: var(--services-card-res);
         border-radius: 40px;
     }
     .haircut{
@@ -340,7 +345,7 @@ main a h2{
         height: 170px;
         min-height: 20vh;
         width: auto;
-        margin: 5% 6% 7% 6%;
+        margin: 5% 6% 4% 6%;
     }
     .services_card_sect>article{
         grid-column: 1/-1;
@@ -500,19 +505,19 @@ a2{
         /* decor */
         text-align: left;
         padding: 5% 0%;
-        margin: 0% 0% 5% 0%;
-        background: rgba(0, 0, 0, 0.3);
+        margin: 2% 0% 5% 0%;
+        background: var(--treatments-card-res);
         border-radius: 40px;
     }
     .card>section>h3{
         /* decor */
-        margin: 0% 5% 1% 5%;
+        margin: 0% 8% 0.5% 8%;
         border: var(--border);
         text-align: center;
     }
     .card>section>p{
         /* decor */
-        margin: 0% 10% 1% 10%;
+        margin: 0% 8% 0.5% 8%;
         border: var(--border);
         text-align: center;
     }
@@ -797,7 +802,6 @@ section>.list_prices{
     h3{
         color: var(--color-white);
         font-family: 'Urbanist', sans-serif;
-        font-weight: 500;
         letter-spacing: 2.5px;
         font-size: clamp(1.2rem, 1.0704rem + 0.2426vw, 1.313rem);
         text-transform: uppercase;
@@ -827,7 +831,8 @@ section>.list_prices{
 footer{
     grid-column: 1/13;
     grid-row: 6;
-    height: 180px;
+    height: auto;
+    min-height: 300px;
     background: rgba(0, 0, 0, 0.712);
     border: var(--border);
 
@@ -910,6 +915,7 @@ footer>article>h1{
 
 #changeword{
     opacity: 1;
+    color: rgba(100, 193, 168, 0.954);
 }
 
 /* TODO

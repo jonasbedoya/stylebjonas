@@ -911,3 +911,14 @@ footer>article>h1{
 #changeword{
     opacity: 1;
 }
+
+/* TODO
+
+ if(screen.width > 500){
+    servicescard.style.padding = '1% 0%';
+    servicescard.style.display = 'grid';
+    servicescard.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    servicescard.style.gridTemplateRows = '70px auto';
+    servicescard.style.background = 'none';  
+  }
+ */

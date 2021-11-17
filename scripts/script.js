@@ -164,14 +164,6 @@ function displayservicemenu(){
   treatmentsbutton.style.wordSpacing = null;
   colorbutton.style.wordSpacing = null;
 
- if(screen.width > 500){
-    servicescard.style.padding = '1% 0%';
-    servicescard.style.display = 'grid';
-    servicescard.style.gridTemplateColumns = 'repeat(3, 1fr)';
-    servicescard.style.gridTemplateRows = '70px auto';
-    servicescard.style.background = 'none';  
-  }
-
   haircutgrid.style.margin = '0%';
   treatmentsgrid.style.margin = '0%';
   colorgrid.style.margin = '0%';

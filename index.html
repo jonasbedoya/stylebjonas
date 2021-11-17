@@ -17,36 +17,44 @@
 <body>
     <a href="https://api.whatsapp.com/send?phone=31627587343&text=Hi%20Jonas!%20I%20would%20love%20to%20schedule%20an%20appointment!"class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
     <main>
-        <img src="/css/img/StyleBjonasLogoFei.png" alt="Logo">
+        <div class="logo">
+            <!-- <img src="/css/img/StyleBjonasLogoFei.png" alt="Logo"> -->
+        </div>
         <!-- slider -->
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide slide_1">
-                <h6>Revitalize your <h6 id="changeword">beauty</h6></h6> 
+              <div class="swiper-slide">
+                  <section class="slide slide_1">
+                    <h6>Revitalize your <h6 id="changeword">beauty</h6></h6> 
+                  </section>
               </div>
-              <div class="swiper-slide slide_2">
-                <h6>Happy clienteles</h6>
-                <article class="happy_clienteles"></article>
+              <div class="swiper-slide">
+                  <section class="slide slide_2">
+                    <div class="happy_clienteles"></div>    
+                    <h6>Happy clienteles</h6>
+                  </section>
               </div>
-              <div class="swiper-slide slide_3">
-                <article class="card_testimonials">
-                    <h3>Balayage</h3>
-                    <p>★★★★★</p>
-                    <p>Best balayage I had so far! Nice highlighting and transition to natural hair color. Recommend :)</p>
-                </article>
-                <article class="card_testimonials">
-                    <h3>Ladies' Haircuts</h3>
-                    <p>★★★★★</p>
-                    <p>Jonas was very nice! He gave me the best head massage when washing my hair. Took the time for me and felt very professional. Will definitely come back!</p>
-                </article>
-                <article class="card_testimonials">
-                    <h3>Men's Haircut</h3>
-                    <p>★★★★★</p>
-                    <p>Very relaxed and comfortable atmosphere. I felt very at ease and Jonas did a great job!</p>
-                </article>
-                <h6>Testimonials</h6>
+              <div class="swiper-slide">
+                  <section class="slide slide_3">
+                    <article class="card_testimonials">
+                        <h3>Balayage</h3>
+                        <p>Best balayage I had so far! Nice highlighting and transition to natural hair color. Recommend :)</p>
+                        <p>★★★★★</p>
+                    </article>
+                    <article class="card_testimonials">
+                        <h3>Ladies' Haircuts</h3>
+                        <p>Jonas was very nice! He gave me the best head massage when washing my hair. Took the time for me and felt very professional. Will definitely come back!</p>
+                        <p>★★★★★</p>
+                    </article>
+                    <article class="card_testimonials">
+                        <h3>Men's Haircut</h3>
+                        <p>Very relaxed and comfortable atmosphere. I felt very at ease and Jonas did a great job!</p>
+                        <p>★★★★★</p>
+                    </article>
+                    <h6>Testimonials</h6>
+                  </section>
               </div>
             </div>
             <!-- If we need pagination -->
@@ -54,8 +62,6 @@
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
           </div>
         <!-- slider -->
     </main>

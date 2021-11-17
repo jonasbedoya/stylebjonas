@@ -236,14 +236,10 @@ const swiper = new Swiper('.swiper', {
   },
   pagination: {
     el: ".swiper-pagination",
-  },
-  // And if we need scrollbar
-  scrollbar: {
-      el: '.swiper-scrollbar',
   }
-  // ,autoplay: {
-  //   delay: 5000,
-  // }
+  ,autoplay: {
+    delay: 5000,
+  }
 });
 // slide1 animation
 const changeword = document.getElementById('changeword');

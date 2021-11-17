@@ -7,7 +7,7 @@
 }
 :root {
     /* margins */
-    --margin: 0.2fr;
+    --margin: 10%;
     --padding-grid: 5%;
     /* border */
     --show: 0px;
@@ -24,7 +24,7 @@
 }
 @media screen and (max-width: 800px) {
     :root {
-        --margin: 0.2fr;
+        --margin: 2fr;
     }
 }
 body{
@@ -908,6 +908,9 @@ footer>article>h1{
     flex: 1;
     margin: 9%;
 }
+.swiper-slide{
+    margin: none var(--margin) none var(--margin);
+}
 /* decor */
 :root {
     --swiper-theme-color: rgba(0, 0, 0, 0.541);
@@ -916,6 +919,40 @@ footer>article>h1{
 #changeword{
     opacity: 1;
     color: rgba(100, 193, 168, 0.954);
+}
+
+/* whatsapp */
+/* for desktop */
+.whatsapp_float {
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+        font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+        z-index:100;
+}
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 22px;
+    }
 }
 
 /* TODO

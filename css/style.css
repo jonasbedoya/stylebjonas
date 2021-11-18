@@ -1050,33 +1050,41 @@ footer>article>h1{
 /* for desktop */
 .whatsapp_float {
 	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
+	width:auto;
+    min-width: 2em;
+	height:auto;
+    min-height: 2em;
+    bottom: 4%;
+    right: 4%;
+	background-color:#1e7162c9;
+	color:var(--color-white-decor);
 	border-radius:50px;
 	text-align:center;
-        font-size:30px;
+    font-size:38px;
 	box-shadow: 2px 2px 3px #999;
-        z-index:100;
+    z-index:100;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .whatsapp-icon {
-	margin-top:16px;
+    margin: auto;
 }
 /* for mobile */
 @media screen and (max-width: 767px){
      .whatsapp-icon {
-	 margin-top:10px;
+         margin-top: auto;
+         border: none;
      }
     .whatsapp_float {
-        width: 40px;
-        height: 40px;
-        bottom: 20px;
-        right: 10px;
-        font-size: 22px;
+        width:auto;
+        min-width: 2em;
+        height:auto;
+        min-height: 2em;
+        bottom: 2%;
+        right: 2%;
+        font-size: 34px;
     }
 }
 

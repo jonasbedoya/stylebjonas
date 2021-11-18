@@ -98,6 +98,8 @@ function backtomenu(){
 
   servicescard.style.paddingBottom = null;
   servicescard.style.gridTemplateRows = null;
+  servicescard.style.flexDirection = null;
+
 
   haircutbutton.style.color = haircolor;
   treatmentsbutton.style.color = haircolor;
@@ -109,7 +111,9 @@ function backtomenu(){
   servicescard.style.display = null;
   servicescard.style.gridTemplateColumns = null;
   servicescard.style.gridTemplateRows = null;
-
+  if (servicescard.classList.contains('active')){
+    servicescard.classList.remove('active');
+  } 
   if (haircutgrid.classList.contains('active')){
     haircutgrid.classList.remove('active');
     // haircutgrid.style.animation = 'show 1s ease-in-out';
@@ -164,40 +168,19 @@ function displayservicemenu(){
   treatmentsbutton.style.wordSpacing = null;
   colorbutton.style.wordSpacing = null;
 
-  haircutgrid.style.margin = '0%';
-  treatmentsgrid.style.margin = '0%';
-  colorgrid.style.margin = '0%';
-
   haircutlist.style.display = 'flex'
   backmenu.style.display = 'block';
-
+  if (!servicescard.classList.contains('active')){
+    servicescard.classList.add('active');
+  } 
   if (!haircutgrid.classList.contains('active')){
     haircutgrid.classList.add('active');
-    haircutgrid.style.gridColumn = '1';
-    haircutgrid.style.gridRow = '1';  
-    if (screen.width <= 500) { // If media query matches
-      haircutgrid.style.gridColumn = '1/-1';
-      haircutgrid.style.gridRow = '1';
-    }
   } 
   if (!treatmentsgrid.classList.contains('active')){
     treatmentsgrid.classList.add('active');
-    treatmentsgrid.style.gridColumn = '2';
-    treatmentsgrid.style.gridRow = '1';  
-    if (screen.width <= 500) { // If media query matches
-      treatmentsgrid.style.gridColumn = '1/-1';
-      treatmentsgrid.style.gridRow = '2';
-    } 
   } 
   if(!colorgrid.classList.contains('active')){
     colorgrid.classList.add('active');
-    colorgrid.style.gridColumn = '3';
-    colorgrid.style.gridRow = '1';  
-
-    if (screen.width <= 500) { // If media query matches
-      colorgrid.style.gridColumn = '1/-1';
-      colorgrid.style.gridRow = '3';
-    } 
   } 
 // erase everything useless
   if (haircutgrid.classList.contains('active')){

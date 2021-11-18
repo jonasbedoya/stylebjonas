@@ -7,7 +7,9 @@
 }
 :root {
     /* margins */
-    --margin: 10%;
+    /* 320px -> 1680px */
+    /* 19px -> 300px */
+    --margin: clamp(1.188rem, -3.2384rem + 22.1318vw, 20rem);
     --padding-grid: 5%;
     /* border */
     --show: 0px;
@@ -20,12 +22,7 @@
     /* services decor */
     --services-card-res: rgba(4, 38, 15, 0.3);
     --treatments-card-res: rgba(38, 35, 4, 0.3);
-
-}
-@media screen and (max-width: 800px) {
-    :root {
-        --margin: 6%;
-    }
+    --color-white-decor--card: rgba(255, 255, 255, 0.23);
 }
 body{
     /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/css/img/background.jpg'); */
@@ -42,52 +39,56 @@ h1{
     color: var(--color-white-decor);
     font-weight: 600;
     font-family: 'Della Respira', serif;
-    font-size: clamp(2rem, 1.5601rem + 2.1996vw, 3.438rem);
+    font-size: clamp(2rem, 1.4941rem + 2.5294vw, 4.15rem);
     letter-spacing: clamp(0.25rem, 0.2118rem + 0.1912vw, 0.375rem);
-    /* CLAMP 1366px*/
+    /* CLAMP 1680px*/
+    /* font-size: 4.15rem; */
     /* letter-spacing: 6px; */
-    /* font-size: 55px; */
     /* CLAMP 320px*/
-    /* font-size: 32px; */
+    /* font-size: 2rem; */
     /* letter-spacing: 4px; */
     text-transform: uppercase;
+    text-align: center;
 }
 p{
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-size: clamp(1.063rem, 1.0058rem + 0.2860vw, 1.25rem);
-    /* CLAMP 1366px*/
-    /* font-size: 20px; */
+    font-size: clamp(1.063rem, 1.0190rem + 0.2200vw, 1.25rem);
+    /* CLAMP 1680px*/
+    /* font-size: 1.25rem; */
     /* CLAMP 320px*/
-    /* font-size: 17px; */
+    /* font-size: 1.063rem; */
     font-weight: 300;
     border: var(--border);
 }
 .card_testimonials>p{
-    font-size: clamp(1rem, 0.9618rem + 0.1912vw, 1.125rem);
-    /* CLAMP 1366px*/
-    /* font-size: 18px; */
+    font-size: clamp(1rem, 0.9706rem + 0.1471vw, 1.125rem);
+    letter-spacing: 0.2px;
+    /* CLAMP 1680px*/
+    /* font-size: 1.125rem; */
     /* CLAMP 320px*/
-    /* font-size: 16px; */
+    /* font-size: 1rem; */
 }
 .card_testimonials>h3{
-    font-size: clamp(1.063rem, 1.0440rem + 0.0948vw, 1.125rem);
+    font-size: clamp(1.063rem, 1.0190rem + 0.2200vw, 1.25rem);
+    /* CLAMP 1680px*/
+    /* font-size: 1.25rem; */
     /* CLAMP 320px*/
-    /* font-size: 17px; */
-    /* CLAMP 1366px*/
-    /* font-size: 18px; */
+    /* font-size: 1.063rem; */
 }
 p1{
     display: block;
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-size: clamp(1.063rem, 1.0058rem + 0.2860vw, 1.25rem);
+    font-size: clamp(1.063rem, 1.0190rem + 0.2200vw, 1.25rem);    
+    letter-spacing: 0.5px;
+    /* CLAMP 1680px*/
+    /* font-size: 1.25rem; */
     /* CLAMP 320px*/
-    /* font-size: 17px; */
-    /* CLAMP 1366px*/
-    /* font-size: 20px; */
+    /* font-size: 1.063rem; */
     font-weight: 200; 
-    margin-bottom: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     border: var(--border);
 }
 
@@ -95,12 +96,12 @@ p1{
 h3{
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-size: clamp(1.125rem, 1.0868rem + 0.1912vw, 1.25rem);
-    letter-spacing: 2px;
-    /* CLAMP 1366px*/
-    /* font-size: 20px; */
+    font-size: clamp(1.125rem, 1.0514rem + 0.3682vw, 1.438rem);
+    letter-spacing: 1px;
+    /* CLAMP 1680px*/
+    /* font-size: 1.438rem; */
     /* CLAMP 320px*/
-    /* font-size: 18px; */
+    /* font-size: 1.125rem; */
     font-weight: 500;
     text-transform: uppercase;
     padding: 0%;
@@ -110,9 +111,11 @@ h6{
     /* to be clamped */
     color: var(--color-white);
     font-family: 'La Belle Aurore', cursive;
+    font-size: clamp(1.875rem, 1.6985rem + 0.8824vw, 2.625rem);    /* CLAMP 1680px*/
+    /* CLAMP 1680px*/
+    /* font-size: 2.625rem; */
     /* CLAMP 320px*/
-    font-size: 30px;
-    /* font-size: 65px; */
+    /* font-size: 1.875rem; */
     letter-spacing: 1px;
     font-weight: 100;
     text-align: center;
@@ -120,11 +123,11 @@ h6{
     margin-bottom: auto;
 }
 .slide_1>h6{
-    font-size: clamp(3.125rem, 2.5514rem + 2.8681vw, 5rem);
-    /* CLAMP 1366px*/
-    /* font-size: 80px; */
+    font-size: clamp(3.125rem, 2.2426rem + 4.4118vw, 6.875rem);
+    /* CLAMP 1680px*/
+    /* font-size: 6.875rem; */
     /* CLAMP 320px*/
-    /* font-size: 50px; */
+    /* font-size: 3.125rem; */
     margin: 0%;
 }
 
@@ -132,15 +135,18 @@ a1{
     color: var(--color-white);
     text-decoration: none;
     font-family: 'Urbanist', sans-serif;
+    /* CLAMP 1680px*/
+    font-size: 1.125rem;
     /* CLAMP 375px*/
-    font-size: 16px;
+    /* font-size: 16px; */
     /* font-size: 16px; */
     border-radius: 14px;
-    padding: 2%;
+    padding: 2% 4%;
     /* CLAMP */
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.187);
     text-align: center;
     cursor: pointer;
+    border: 1px solid var(--color-white-decor--card);
 }
 a1:hover{
     background: rgba(255, 255, 255, 0.15);
@@ -269,14 +275,12 @@ main a h2{
     flex-direction: column;
     min-height: 70vh;
     justify-content: space-around;
-    padding: 0% var(--margin);
     border: var(--border);
     margin: 0% 0% 5% 0%;
 }
 .services_card>section{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    border: var(--border);
 }
 .services_card_sect>article{
     grid-column: 2 / 4;
@@ -287,34 +291,37 @@ main a h2{
     border: var(--border);
 }
 .services_card_sect>article>a1{
-    display: inline-block;
     margin-top: 1%;
-    padding: 2%;
-    width: 6rem;
+    width: fit-content;
 }
 .active>article>h3:hover{
     cursor: pointer;
 }
+.haircut, .treatments, .color{
+    width: 85%;
+}
 .haircut{
-    margin-right: 20%;
+    margin-right: auto;
+    margin-left: 0%;
 }
 .treatments{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .color{
-    margin-left: 20%;
+    margin-left: auto;
+    margin-right: 0%;
 }
 .div_img{
     border: var(--border);
     background: transparent;
-    background-position: 82% 18%;
+    background-position: 70% 30%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto 90%;
     height: clamp(6em,10vw,10em);
     min-height: 15vh;
     border-right: 1px solid var(--color-white-decor);
-    margin:auto 0%;
+    margin: auto 0%;
 }
 
 .article_img_haircut{
@@ -342,7 +349,7 @@ main a h2{
     margin: 0% 0% auto auto;
     border: var(--border);
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
     .services{
         grid-template-columns: var(--margin) 1fr 1fr 1fr var(--margin);
         grid-template-rows: 80px auto;
@@ -366,6 +373,21 @@ main a h2{
     .services_card_sect{
         background: var(--services-card-res);
         border-radius: 40px;
+        border: 1px solid var(--color-white-decor--card);
+    }
+    .services_card_sect>article{
+        grid-column: 1/-1;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0% auto;
+        padding: 0%;
+        border-radius: 40px;
+        border: 1px solid var(--color-white-decor--card);
+    }
+    .haircut, .treatments, .color{
+        width: 100%;
     }
     .haircut{
         order: 3;
@@ -391,22 +413,14 @@ main a h2{
     .div_img{
         background-position: center;
         border-right: none;
-        height: 170px;
+        height: auto;
         min-height: 20vh;
         width: auto;
+        min-width: 20%;
         margin: 5% 6% 4% 6%;
-    }
-    .services_card_sect>article{
-        grid-column: 1/-1;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        padding-left: 0%;
-        margin: auto 0%;
-        border: var(--border);
+        padding: 0%;
     }
     .services p1, .services h3, .services a1{
-        margin: 0% 8% 0.5% 8%;
         text-align: center;
     }
 }
@@ -434,12 +448,13 @@ a2{
     height: auto;
     min-height: 80vh;
     /*  */
-    margin: 5% 0%;
+    margin: 0% 0% 5% 0%;
     border: var(--border);
 }
 .season_promotions>h1{
     grid-column: 2/-2;
     grid-row: 1;
+    height: fit-content;
     margin: auto;
     border: var(--border);
 }
@@ -452,34 +467,37 @@ a2{
     grid-row: 2;
     display: flex;
     justify-content: center;
-    gap: 3%;
+    gap: 1%;
     border: var(--border);
 }
 .card{
     /* grid */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 1fr;
     height: auto;
-    min-height: 500px;
-    width: 100%;
+    min-height: 30vh;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 50px;
     /* decor */
     border: 1px solid linear-gradient(156.79deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.33) 100%);
 }
 .card:nth-child(1){
-    border-right: 1px solid white;
+    border: 1px solid var(--color-white-decor--card);
 }
 .card:nth-child(2){
-    border-right: 1px solid white;
+    border: 1px solid var(--color-white-decor--card);
 }
 .card:nth-child(3){
-    border-right: 1px solid white;
+    border: 1px solid var(--color-white-decor--card);
 }
 .card>section>h3{
-    margin: 0% 6% 0% 6%;
+    text-align: center;
+    margin: 0% 6% 1% 6%;
 }
 .card>section>p{
+    text-align: left;
     margin: 0% 6% 0% 6%;
 }
 .card>section{
@@ -488,11 +506,12 @@ a2{
     margin: 0% 6% 6% 6%;
 }
 .card_img_flam,.card_img_rehab, .card_img_kera{
-    background-size: 80%;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    min-height: 60%;
-    margin: 6% 6% 0% 6%;
+    background-position: center;
+    min-height: 40%;
+    min-width: 1fr;
+    margin: 6% 6% 6% 6%;
     border: var(--border);
 }
 .card_img_flam{
@@ -504,35 +523,56 @@ a2{
 .card_img_kera{
     background-image: url('/css/svg/keratina.svg');
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     .season_promotions>section{
+        display: flex;
         flex-direction: column;
-        gap: 0%;
+        border: var(--border);
     }
     .card{
         flex-direction: row;
-        min-height: 300px;
+        justify-content: center;
+        height: auto;
+        min-height: 25vh;
+        margin: 0%;
+    }
+    .card:nth-child(1){
+        margin-top: 6%;
     }
     .card:nth-child(2){
-        margin: 3% 0%;
+        margin: 3% auto;
+    }
+    .card:nth-child(3){
+        margin-bottom: 6%;
     }
     .card_img_flam,.card_img_rehab, .card_img_kera{
         background-size: contain;
-        min-width: 40%;
-        margin: 3%;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: auto;
+        min-width: 20%;
+        margin: 2% 0% 2% auto;
+        border: var(--border);
     }
     .card>section{
-        margin: auto 5% auto 0%;
+        display: flex;
+        flex-direction: column;
+        margin: auto auto auto 2%;
+        width: 60%;
     }
     .card>section>h3{
-        margin: auto auto 0% 0%;
+        text-align: left;
+        margin: 0% 2% 0% 2%;
     }
     .card>section>p{
-        margin: 0% auto auto 0%;
+        margin: 0% 2% 0% 2%;
     }
-
+    .season_promotions>h1{
+        margin-top: 12%;
+        border: var(--border);
+    }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
     .season_promotions{
         padding:5% 0%;
     }
@@ -553,7 +593,7 @@ a2{
         /* decor */
         text-align: left;
         padding: 5% 0%;
-        margin: 2% 0% 5% 0%;
+        margin: 2% none 5% none;
         background: var(--treatments-card-res);
         border-radius: 40px;
     }
@@ -573,17 +613,14 @@ a2{
         /* positioning */
         display: flex;
         justify-content:center;
+        width: 85%;
         /* decor */
-        margin: 0%;
+        margin: auto;
         /* border-left: 1px solid rgba(255, 255, 255, 0.425); */
-    }
-    .card{
-        
-        border-bottom: 1px solid rgba(255, 255, 255, 0.425);
     }
     .card_img_flam,.card_img_rehab, .card_img_kera{
         border: var(--border);
-        height: 170px;
+        height: auto;
         min-height: 20vh;
         width: auto;
         margin: 5% 6% 4% 6%;
@@ -600,7 +637,6 @@ a2{
     .season_promotions>section{
         grid-row: 3;
     }
-
 }
 /* work time */
 .worktime{
@@ -616,6 +652,13 @@ a2{
     /* padding: 15% 0%; */
     padding: clamp(90px,15%,130px) 0%;
 }
+.worktime h3{
+    text-align: center;
+    margin-bottom: 1%;
+}
+.worktime p{
+    text-align: center;
+}
 .worktime>article:first-child{
     grid-column: 1;
     display: flex;
@@ -628,7 +671,7 @@ a2{
 .worktime>article:first-child>h1{
     /* positioning */
     display: flex;
-    text-align: end;
+    text-align: center;
     /* decor */
     margin: auto; 
 }
@@ -650,9 +693,8 @@ a2{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* font-size: clamp(2rem, 4vw, 5rem);  */
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
     .worktime{
         /* template */
         grid-template-columns: 1fr;
@@ -767,18 +809,45 @@ hs33{
     margin-bottom: 6%;
 }
 /*  */
-.services_card_sect.active.selected{
-    background: rgba(0, 0, 0, 0.4);
+
+    /* if (screen.width > 650) { // If media query matches
+        servicescard.style.display = 'grid';
+        servicescard.style.gridTemplateColumns = '1fr 1fr 1fr';
+        servicescard.style.gridTemplateRows = '70px auto';
+        haircutgrid.style.width = '100%';
+        haircutgrid.style.borderTopLeftRadius = '15px';
+        haircutgrid.style.borderTopRightRadius = 0;
+        treatmentsgrid.style.width = '100%';
+        colorgrid.style.width = '100%';
+        colorgrid.style.borderTopRightRadius = '15px';
+      } */
+.services_card.active{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 70px auto;
 }
-.services_card_sect.active:nth-child(1), .services_card_sect.active:nth-child(2), .services_card_sect.active:nth-child(3){
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+.haircut.active{
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+}
+.treatments.active{
+    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+}
+.color.active{
+    width: 100%;
+    grid-column: 3;
+    grid-row: 1;
+}
+.services_card_sect.active.selected{
+    background: rgba(38, 35, 4, 0.3);
 }
 .services_card_sect.active>article{
     grid-column: 1/-1;
     padding: 0%;
+    border: none;
 }
 .halist_prices>article>hs1, .halist_prices>article>hs10, .halist_prices>article>hs11, .trlist_prices>article>hs2, .trlist_prices>article>hs20, .trlist_prices>article>hs22, .colist_prices>article>hs3, .colist_prices>article>hs33{
     display: block;
@@ -788,7 +857,7 @@ hs33{
     margin: 0% auto;
 }
 .halist_prices, .trlist_prices, .colist_prices{
-    grid-column: 1/-1;
+    grid-column: 1/6;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     grid-row: 2;
@@ -799,26 +868,39 @@ hs33{
     background: rgba(0, 0, 0, 0.4);
     border: var(--border);
 }
+.haircut.services_card_sect.active{
+    border-top-left-radius: 15px;
+}
+.treatments.services_card_sect.active{
+    border-radius: 0px;
+}
+.color.services_card_sect.active{
+    border-top-right-radius: 15px;
+}
+.services_card_sect.active{
+    border-radius: 0px;
+    background: rgba(0, 0, 0, 0.4);
+}
 section>.list_prices{
     display: none;
     padding: 8% 0%;
 }
-.halist_prices{
-}
-.trlist_prices{
-}
-.colist_prices{
-}
-@media screen and (max-width: 500px) {
-    .services_card_sect.active.selected{
-        background: rgba(38, 35, 4, 0.3);
+@media screen and (max-width: 650px) {
+    .haircut.active{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
     .services_card_sect.active{
-        border-radius: 0px;
+        padding: 5%;
+        margin: 0%;
+        width: 90%;
     }
-    .services_card_sect.active{
+    .services_card.active{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .treatments.active, .color.active{
         border-radius: 0px;
-        background: rgba(0, 0, 0, 0.4);
     }
     .services.active{
         grid-template-columns:  var(--margin) 1fr 1fr 1fr var(--margin);
@@ -829,16 +911,15 @@ section>.list_prices{
         grid-row: 4;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
     a1{
         text-decoration: none;
         border-radius: 980px;
         display: flex;
         justify-content: center;
-        padding: 3%;
+        padding: 2% 5%;
         /* text-transform:uppercase; */
         background: rgba(255, 255, 255, 0.2);
-        border: var(--border);
     }
     .services_card_sect>article>a1{
         margin: 3% auto 1% auto;
@@ -905,7 +986,7 @@ footer>article>h1{
 }
 .card_testimonials{
     border-radius: 15px;
-    padding: 4%;
+    padding: 3% 2.5%;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
 }
@@ -942,9 +1023,9 @@ footer>article>h1{
     flex-direction: column;
     justify-content: center;
     /* counting all margins */
-    width: calc(100% - 4*var(--margin));
+    width: auto;
     height: 100%;
-    margin: auto;
+    margin: auto 10%;
     border: var(--border);
 }
 /* decor */

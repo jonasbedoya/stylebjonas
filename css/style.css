@@ -407,6 +407,9 @@ main a h2{
         border: var(--border);
         margin: 0%;
     }
+    .services_card.active>section:nth-child(4) {
+        margin: 0%;
+    }
     .services_card_sect{
         display: flex;
         flex-direction: column;

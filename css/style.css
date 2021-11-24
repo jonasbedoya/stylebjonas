@@ -9,8 +9,9 @@
     /* margins */
     /* 320px -> 1680px */
     /* 19px -> 300px */
-    --margin: clamp(1.188rem, -3.2384rem + 22.1318vw, 20rem);
-    --padding-grid: 5%;
+    /* --margin: clamp(1.188rem, -3.2384rem + 22.1318vw, 20rem); */
+    --maxwidth: 940px;
+    --padding: 4%;
     /* border */
     --show: 0px;
     --border: var(--show) solid #ff4ee292;
@@ -24,10 +25,15 @@
     --treatments-card-res: rgba(38, 35, 4, 0.3);
     --color-white-decor--card: rgba(255, 255, 255, 0.23);
 }
+@media screen and (max-width: 550px) {
+    :root {
+        --padding: 8%;
+    }
+}
 body{
     /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/css/img/background.jpg'); */
     background: linear-gradient(180deg, #0E4951 0%, rgba(14, 73, 81, 0) 100%), linear-gradient(140.4deg, #0E4951 20.13%, rgba(14, 73, 81, 0) 77.37%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(252.44deg, #2FBFA5 0%, #21777A 100%), linear-gradient(0deg, #0E4951, #0E4951);    background-attachment: fixed;
-    grid-template-columns: var(--margin) repeat(10,1fr) var(--margin);
+    grid-template-columns: auto;
     grid-template-rows: auto;
 }
 /* animation */
@@ -39,8 +45,11 @@ h1{
     color: var(--color-white-decor);
     font-weight: 600;
     font-family: 'Della Respira', serif;
-    font-size: clamp(2rem, 1.4941rem + 2.5294vw, 4.15rem);
+    font-size: clamp(2rem, 1.0710rem + 4.6452vw, 3.8rem);
     letter-spacing: clamp(0.25rem, 0.2118rem + 0.1912vw, 0.375rem);
+    /* CLAMP 940px*/
+    /* font-size: 3.8rem; */
+    /* font-size: clamp(2rem, 1.4941rem + 2.5294vw, 4.15rem); */
     /* CLAMP 1680px*/
     /* font-size: 4.15rem; */
     /* letter-spacing: 6px; */
@@ -53,7 +62,10 @@ h1{
 p{
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-size: clamp(1.063rem, 1.0190rem + 0.2200vw, 1.25rem);
+    font-size: clamp(1.063rem, 1.0026rem + 0.3019vw, 1.18rem);
+    /* CLAMP 940px*/
+    /* font-size: 1.18rem; */
+    /* font-size: clamp(1.063rem, 1.0190rem + 0.2200vw, 1.25rem); */
     /* CLAMP 1680px*/
     /* font-size: 1.25rem; */
     /* CLAMP 320px*/
@@ -64,6 +76,8 @@ p{
 .card_testimonials>p{
     font-size: clamp(1rem, 0.9706rem + 0.1471vw, 1.125rem);
     letter-spacing: 0.2px;
+    /* CLAMP 940px*/
+
     /* CLAMP 1680px*/
     /* font-size: 1.125rem; */
     /* CLAMP 320px*/
@@ -80,8 +94,11 @@ p1{
     display: block;
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-size: clamp(1.063rem, 1.0190rem + 0.2200vw, 1.25rem);    
+    font-size: clamp(1.063rem, 1.0026rem + 0.3019vw, 1.18rem);
     letter-spacing: 0.5px;
+    /* CLAMP 940px*/
+    /* font-size: 1.18rem; */
+    /* font-size: clamp(1.063rem, 1.0190rem + 0.2200vw, 1.25rem);     */
     /* CLAMP 1680px*/
     /* font-size: 1.25rem; */
     /* CLAMP 320px*/
@@ -96,8 +113,10 @@ p1{
 h3{
     color: var(--color-white);
     font-family: 'Urbanist', sans-serif;
-    font-size: clamp(1.125rem, 1.0514rem + 0.3682vw, 1.438rem);
+    font-size: clamp(1.125rem, 0.9635rem + 0.8077vw, 1.438rem);
     letter-spacing: 1px;
+    /* CLAMP 940px*/
+    /* font-size: clamp(1.125rem, 1.0514rem + 0.3682vw, 1.438rem); */
     /* CLAMP 1680px*/
     /* font-size: 1.438rem; */
     /* CLAMP 320px*/
@@ -167,6 +186,8 @@ main{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border: var(--border);
+
 }
 .logo{
     background-image: url(/css/img/StyleBjonasLogoFei.png);
@@ -174,9 +195,8 @@ main{
     background-repeat: no-repeat;
     background-size: auto 80%;
     position: relative;
-    height: 12%;
-    min-height: 12vh;
-    margin-top: 3%;
+    height: 80px;
+    margin-top: 2%;
 }
 main img{
     min-width: 180px;
@@ -217,6 +237,9 @@ main a h2{
     grid-column: 1/-1;
     grid-row: 2;
     height: 60vh;
+    max-width: var(--maxwidth);
+    margin: 0% auto;
+    padding: 0% var(--padding);
     display: grid;
     grid-template-columns: 50% 50%;
     padding: 10%;
@@ -243,15 +266,21 @@ main a h2{
 /* services */
 .services{
     /* positioning */
-    grid-column: 1/13;
+    grid-column: 2;
     grid-row: 3;
     height: auto;
+    width: auto;
+    max-width: var(--maxwidth);
+    padding: 0% var(--padding);
+    margin: 0% auto;
     /* grid */
     display: grid;
     grid-template-columns:  var(--margin) 1fr 1fr 1fr var(--margin);
     grid-template-rows: auto;
     /* useful */
-    background: linear-gradient(228.04deg, rgba(24, 102, 113, 0.4) 26.33%, rgba(51, 150, 137, 0.7) 92.46%),rgba(0, 0, 0, 0.4);    /* background: linear-gradient(180deg, rgba(24, 102, 113, 0.8) 0%, #339689 100%), #000000; */
+    /* background: linear-gradient(228.04deg, rgba(24, 102, 113, 0.4) 26.33%, rgba(51, 150, 137, 0.7) 92.46%),rgba(0, 0, 0, 0.4);    background: linear-gradient(180deg, rgba(24, 102, 113, 0.8) 0%, #339689 100%), #000000; */
+    background: transparent;
+    border: var(--border);
 }
 
 .services>h1{
@@ -273,7 +302,8 @@ main a h2{
     grid-row: 2;
     display: flex;
     flex-direction: column;
-    min-height: 70vh;
+    height: auto;
+    min-height: 650px;
     justify-content: space-around;
     border: var(--border);
     margin: 0% 0% 5% 0%;
@@ -315,13 +345,12 @@ main a h2{
 .div_img{
     border: var(--border);
     background: transparent;
-    background-position: 70% 30%;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: auto 90%;
-    height: clamp(6em,10vw,10em);
-    min-height: 15vh;
+    background-size: 100% 100%;
+    padding: 55% 0% 0% 0%;
     border-right: 1px solid var(--color-white-decor);
-    margin: auto 0%;
+    margin: 0%;
 }
 
 .article_img_haircut{
@@ -349,75 +378,88 @@ main a h2{
     margin: 0% 0% auto auto;
     border: var(--border);
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 550px) {
     .services{
-        grid-template-columns: var(--margin) 1fr 1fr 1fr var(--margin);
-        grid-template-rows: 80px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    
+        height: auto;
+        min-height: 100vh;
         background: transparent;
+        margin: 2% 0% 5% 0%;
     }
     .services>h1{
         border: var(--border);
-        grid-column: 2/-2;
+        grid-column: 1/-1;
         grid-row: 1;
+        padding: 10% 0% 5% 0%;
+        margin: 0%;
+
         display: flex;
-        margin: auto;
         transform: none;  
     }
     .services_card{
+        grid-column: 1/-1;
+
         display: flex;
         flex-direction: column-reverse;
-        padding: 5% 0%;
         border: var(--border);
-        margin: 2% 0% 5% 0%;
+        margin: 0%;
     }
     .services_card_sect{
-        background: var(--services-card-res);
+        display: flex;
+        flex-direction: column;
+
+        width: auto;
+
         border-radius: 40px;
+        padding: 8%;
         border: 1px solid var(--color-white-decor--card);
+
+        background: var(--services-card-res);
     }
     .services_card_sect>article{
-        grid-column: 1/-1;
-        width: 80%;
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        margin: 0% auto;
-        padding: 0%;
+        justify-content: center;
+        height:auto;
+        width: auto;
+        flex: 1 1 30%;
+
+        padding-left: 0%;
         border-radius: 40px;
     }
     .haircut, .treatments, .color{
-        width: 100%;
+        margin: 0%;
     }
     .haircut{
         order: 3;
         margin: 0% auto;
-        margin-bottom: 5%;
     }
     .treatments{
         order: 2;
         margin: 0% auto;
-        margin-bottom: 5%;
     }
     .color{
         order: 1;
-        margin: 0% auto;
     }
     .services_card>section{
-        padding: 5% 0%;
+        display: flex;
+        flex-direction: column;
+    }
+    .services_card>section:nth-child(4){
+        margin: 3% 0%;
     }
     .article_img_haircut, .article_img_treatment, .article_img_color{
-        grid-column: 1/-1;
-        grid-row: 1;
+        flex: 1 1;
+        margin-bottom: 6%;
     }
     .div_img{
         background-position: center;
         border-right: none;
-        height: auto;
-        min-height: 20vh;
+        padding: 60% 0% 0% 0%;
         width: auto;
-        min-width: 20%;
-        margin: 5% 6% 4% 6%;
-        padding: 0%;
     }
     .services p1, .services h3, .services a1{
         text-align: center;
@@ -446,8 +488,9 @@ a2{
     grid-template-rows: auto;
     height: auto;
     min-height: 80vh;
-    /*  */
-    margin: 0% 0% 5% 0%;
+    max-width: var(--maxwidth);
+    padding: 0% var(--padding);
+    margin: 0% auto 5% auto;
     border: var(--border);
 }
 .season_promotions>h1{
@@ -526,6 +569,7 @@ a2{
     .season_promotions>section{
         display: flex;
         flex-direction: column;
+        gap: 1em;
         border: var(--border);
     }
     .card{
@@ -534,29 +578,33 @@ a2{
         height: auto;
         min-height: 25vh;
         margin: 0%;
+        display: flex;
     }
     .card:nth-child(1){
-        margin-top: 6%;
+        /* margin-top: 6%; */
     }
     .card:nth-child(2){
-        margin: 3% auto;
+        /* margin: 3% 0%; */
     }
     .card:nth-child(3){
-        margin-bottom: 6%;
+        /* margin-bottom: 6%; */
     }
     .card_img_flam,.card_img_rehab, .card_img_kera{
-        background-size: contain;
+        flex: 1 0 45%;
+        background-size: 100% 80%;
         background-repeat: no-repeat;
         background-position: center;
         min-height: auto;
-        min-width: 20%;
-        margin: 2% 0% 2% auto;
+        padding-top: 25%;
+        min-width: 25%;
+        margin: 0%;
         border: var(--border);
     }
     .card>section{
         display: flex;
+        flex: 1 0 55%;
         flex-direction: column;
-        margin: auto auto auto 2%;
+        margin: auto;
         width: 60%;
     }
     .card>section>h3{
@@ -571,9 +619,10 @@ a2{
         border: var(--border);
     }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 550px) {
     .season_promotions{
-        padding:5% 0%;
+        padding: 5% var(--padding);
+        min-height: 100vh;
     }
     .season_promotions section{
         flex-direction: column;
@@ -587,47 +636,46 @@ a2{
         display: flex;
         grid-column: 2/5;
         flex-direction: column;
+        gap: 3%;
         height:auto;
         width: auto;
         /* decor */
         text-align: left;
         padding: 5% 0%;
-        margin: 2% none 5% none;
         background: var(--treatments-card-res);
         border-radius: 40px;
+        /* changes */
+        padding: 8%;
+    }
+    .card>section{
+        display: flex;
+        justify-content:center;
+        flex: 1 0 30%;
+        width: 100%;
+        margin: auto;
     }
     .card>section>h3{
-        /* decor */
-        margin: 0% 8% 0.5% 8%;
         border: var(--border);
+        margin: 0%;
         text-align: center;
     }
     .card>section>p{
-        /* decor */
-        margin: 0% 8% 0.5% 8%;
         border: var(--border);
+        margin: 0%;
         text-align: center;
     }
-    .card>section{
-        /* positioning */
-        display: flex;
-        justify-content:center;
-        width: 85%;
-        /* decor */
-        margin: auto;
-        /* border-left: 1px solid rgba(255, 255, 255, 0.425); */
-    }
     .card_img_flam,.card_img_rehab, .card_img_kera{
+        flex: 1 1 70%;
         border: var(--border);
-        height: auto;
-        min-height: 20vh;
+        background-size: 100% 100%;
         width: auto;
-        margin: 5% 6% 4% 6%;
-        padding: 0%;
+        padding: 55% 0% 0% 0%;
+        margin: 0%;
     }
     .season_promotions>h1{
         text-align: center;
-        margin: 5% auto;
+        margin: 0%;
+        padding: 10% 0% 5% 0%;
     }
     .card:nth-child(2){
         border-left: none;
@@ -638,46 +686,44 @@ a2{
     }
 }
 /* work time */
+.wt_bg{
+    background: rgba(0, 0, 0, 0.6);
+}
 .worktime{
     display: grid;
     grid-column: 1/-1;
+    max-width: var(--maxwidth);
+    padding: clamp(90px,15%,130px) var(--padding);
+    margin: 0% auto;
     grid-row: 4;
     /* template */
     grid-template-columns: 50% 50%;
-    /* height: 18vh; */
     height: auto;
     /* decor */
-    background: rgba(0, 0, 0, 0.6);
-    /* padding: 15% 0%; */
-    padding: clamp(90px,15%,130px) 0%;
+    border: var(--border);
 }
 .worktime h3{
-    text-align: center;
+    text-align: left;
     margin-bottom: 1%;
 }
 .worktime p{
-    text-align: center;
+    text-align: left;
 }
 .worktime>article:first-child{
     grid-column: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: auto 0% auto auto;
-    padding: 5%;
-    border-right: 1px solid rgba(255, 255, 255, 0.671);
+    margin: auto 0% auto 0%;
+    padding-right: 5%;
+    border-right: 1px solid var(--color-white-decor--card);
 }
 .worktime>article:first-child>h1{
-    /* positioning */
-    display: flex;
-    text-align: center;
-    /* decor */
-    margin: auto; 
+    text-align: right;
 }
 .worktime>article:first-child>article{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: right;
     margin: 3%;
     border: var(--border);
 }
@@ -693,7 +739,7 @@ a2{
     flex-direction: column;
     justify-content: center;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 550px) {
     .worktime{
         /* template */
         grid-template-columns: 1fr;
@@ -704,17 +750,16 @@ a2{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: auto;
+        padding: 0%;
+        margin: auto auto 4% auto;
         border-right: none;
         border: var(--border);
     }
     .worktime>article:first-child>h1:nth-child(1){
         margin-right: 2%;
-        margin-bottom: 1%;
     }
     .worktime>article:first-child>h1:nth-child(2){
         margin-left: 2%;
-        margin-bottom: 1%;
     }
     .worktime>article:nth-child(2){
         grid-column: 1/-1;
@@ -724,6 +769,12 @@ a2{
         text-align: center;
         padding-left: 0%;
         border: var(--border);
+    }
+    .worktime h3{
+        text-align: center;
+    }
+    .worktime p{
+        text-align: center;
     }
         
 }
@@ -884,7 +935,7 @@ section>.list_prices{
     display: none;
     padding: 8% 0%;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 550px) {
     .haircut.active{
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
@@ -919,7 +970,7 @@ section>.list_prices{
         grid-row: 4;
     }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 550px) {
     a1{
         text-decoration: none;
         border-radius: 980px;
@@ -946,11 +997,11 @@ section>.list_prices{
 
 /* footer */
 footer{
-    grid-column: 1/13;
+    grid-column: 1/-1;
     grid-row: 6;
     height: auto;
     min-height: 300px;
-    background: rgba(0, 0, 0, 0.712);
+    background: rgba(0, 0, 0, 0.7);
     border: var(--border);
 
     display: flex;
@@ -961,8 +1012,11 @@ footer{
 footer>article{
     display: flex;
     flex-direction: column;
-    margin: auto;
     text-align: center;
+    max-width: var(--maxwidth);
+    margin: 0% auto;
+
+    border: var(--border);
 }
 
 footer>article>h1{
@@ -976,6 +1030,7 @@ footer>article>h1{
     height: auto;
     width: 100%;
     margin: 2% 0%;
+    border: var(--border);
 }
 /* first slider */
 .slide_1{
@@ -1033,8 +1088,16 @@ footer>article>h1{
     /* counting all margins */
     width: auto;
     height: 100%;
-    margin: auto 10%;
+    max-width: var(--maxwidth);
+    padding: 0% var(--padding);
+    margin: 0% auto;
     border: var(--border);
+}
+#swiper-button-next{
+    /* TODO */
+}
+#swiper-button-prev{
+    /* TODO */
 }
 /* decor */
 :root {
@@ -1056,12 +1119,12 @@ footer>article>h1{
     min-height: 2em;
     bottom: 4%;
     right: 4%;
-	background-color:#1e7162c9;
+	background-color:#1e7162d9;
 	color:var(--color-white-decor);
 	border-radius:50px;
 	text-align:center;
     font-size:38px;
-	box-shadow: 2px 2px 3px #999;
+	box-shadow: 1px 1px 2px var(--color-white-decor);
     z-index:100;
     display: flex;
     justify-content: center;

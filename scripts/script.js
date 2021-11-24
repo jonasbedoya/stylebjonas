@@ -213,12 +213,19 @@ function responsive() {
 // slider
 const swiper = new Swiper('.swiper', {
   // Navigation arrows
+  grabCursor: true,
+  loop: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
+  keyboard: true,
   navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   }
   ,autoplay: {
     delay: 5000,

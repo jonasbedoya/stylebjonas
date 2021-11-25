@@ -7,6 +7,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 :root {
     /* margins */
@@ -16,7 +17,7 @@
     --maxwidth: 940px;
     --padding: 4%;
     /* border */
-    --show: 0px;
+    --show: 1px;
     --border: var(--show) solid #ff4ee292;
     --border-section: var(--show) solid #ffc3f5;
     /* colors */
@@ -1018,27 +1019,20 @@ footer{
 footer>*{
     border: var(--border);
 }
-
 footer>section{
     display: flex;
     flex-direction: column;
     text-align: center;
     max-width: var(--maxwidth);
-    margin: 0%;
-    margin-bottom: 8%;
-    padding: 0%;
-
+    margin: 0% auto;
     border: var(--border);
 }
-
 footer>section>h1{
     text-transform: none;
 }
-
 footer h3{
     text-transform: none;
 }
-
 .mapslink{
     color: var(--color-white);
     text-decoration: none;
@@ -1058,7 +1052,7 @@ footer h3{
 }
 .contactme{
     display: flex;
-    gap: 1.5em;
+    gap: 1.5rem;
 }
 .socials{
     display: flex;
@@ -1067,7 +1061,6 @@ footer h3{
     justify-content: center;
     border: var(--border);
 }
-
 /* icons socials */
 .fa-instagram, .fa-facebook{
     margin: auto 2% 0% 0%;

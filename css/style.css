@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -452,7 +455,7 @@ main a h2{
         flex-direction: column;
     }
     .services_card>section:nth-child(4){
-        margin: 3% 0%;
+        margin: 1rem 0%;
     }
     .article_img_haircut, .article_img_treatment, .article_img_color{
         flex: 1 1;
@@ -681,7 +684,7 @@ a2{
         padding: 10% 0% 5% 0%;
     }
     .card:nth-child(2){
-        margin: 3% 0%;
+        margin: 1rem 0%;
         border-left: none;
         border-right: none;
     }
@@ -1003,7 +1006,6 @@ section>.list_prices{
 footer{
     grid-column: 1/-1;
     grid-row: 6;
-    height: auto;
     min-height: 300px;
     background: rgba(0, 0, 0, 0.7);
     border: var(--border);
@@ -1011,22 +1013,75 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: var(--padding);
+}
+footer>*{
+    border: var(--border);
 }
 
-footer>article{
+footer>section{
     display: flex;
     flex-direction: column;
     text-align: center;
     max-width: var(--maxwidth);
-    margin: 0% auto;
+    margin: 0%;
+    margin-bottom: 8%;
+    padding: 0%;
 
     border: var(--border);
 }
 
-footer>article>h1{
+footer>section>h1{
     text-transform: none;
 }
 
+footer h3{
+    text-transform: none;
+}
+
+.mapslink{
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    margin: auto;
+    width: fit-content;
+    font-size: 1.125rem;
+    border-radius: 980px;
+    cursor: pointer;
+    padding: 2% 4%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.187);
+    border: 1px solid var(--color-white-decor--card);
+}
+.mapslink:hover{
+    background: rgba(255, 255, 255, 0.15);
+}
+.contactme{
+    display: flex;
+    gap: 1.5rem;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    flex: 1 1;
+    justify-content: center;
+    border: var(--border);
+}
+
+/* icons socials */
+.fa-instagram, .fa-facebook{
+    margin: auto 2% 0% 0%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--color-white);
+}
+.treatwell_link{
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--color-white);
+    text-decoration-line: none;
+    font-size: 1.6rem;
+    margin: auto 0% 0% 0%;
+}
 /* slider */
 .swiper{
     display: flex;
@@ -1135,9 +1190,10 @@ footer>article>h1{
     text-decoration: none;
 }
 
-.whatsapp-icon {
+.fa-whatsapp {
     margin: auto;
 }
+
 /* for mobile */
 @media screen and (max-width: 767px){
      .whatsapp-icon {

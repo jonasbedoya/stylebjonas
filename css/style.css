@@ -17,7 +17,7 @@
     --maxwidth: 940px;
     --padding: 4%;
     /* border */
-    --show: 1px;
+    --show: 0px;
     --border: var(--show) solid #ff4ee292;
     --border-section: var(--show) solid #ffc3f5;
     /* colors */
@@ -1050,9 +1050,11 @@ footer h3{
 .mapslink:hover{
     background: rgba(255, 255, 255, 0.15);
 }
-.contactme{
-    display: flex;
-    gap: 1.5rem;
+.contactme>*{
+    margin-bottom: 1.6rem;
+}
+footer p:last-child{
+    margin-bottom: 0%;
 }
 .socials{
     display: flex;

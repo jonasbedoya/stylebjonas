@@ -1058,7 +1058,7 @@ footer h3{
 }
 .contactme{
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5vh;
 }
 .socials{
     display: flex;

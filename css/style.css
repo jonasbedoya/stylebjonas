@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
-
+/* maybe */
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* font-family: 'Gentium Basic', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;1,700&display=swap');
 
 * {
@@ -22,12 +24,12 @@
     --border-section: var(--show) solid #ffc3f5;
     /* colors */
     --color-white: rgba(255, 255, 255, 0.8);
-    --color-white-decor: rgba(255, 255, 255, 0.7);
+    --color-white-decor: rgba(255, 255, 255, 0.63);
     --bg: #FFFF;
     /* services decor */
     --services-card-res: rgba(4, 38, 15, 0.3);
     --treatments-card-res: rgba(38, 35, 4, 0.3);
-    --color-white-decor--card: rgba(255, 255, 255, 0.23);
+    --color-white-decor--card: rgba(255, 255, 255, 0.25);
 }
 @media screen and (max-width: 550px) {
     :root {
@@ -47,8 +49,8 @@ body{
 /* Principal Titles */
 h1{
     color: var(--color-white-decor);
-    font-weight: 600;
-    font-family: 'Della Respira', serif;
+    font-weight: 900;
+    font-family: 'Gentium Basic', serif;
     font-size: clamp(2rem, 1.0710rem + 4.6452vw, 3.8rem);
     letter-spacing: clamp(0rem, -0.1935rem + 0.9677vw, 0.375rem);
     /* CLAMP 940px*/
@@ -65,7 +67,7 @@ h1{
 }
 p{
     color: var(--color-white);
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Gentium Basic', serif;
     font-size: clamp(1.063rem, 1.0026rem + 0.3019vw, 1.18rem);
     /* CLAMP 940px*/
     /* font-size: 1.18rem; */
@@ -97,7 +99,7 @@ p{
 p1{
     display: block;
     color: var(--color-white);
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Gentium Basic', serif;
     font-size: clamp(1.063rem, 1.0026rem + 0.3019vw, 1.18rem);
     letter-spacing: 0.5px;
     /* CLAMP 940px*/
@@ -116,18 +118,19 @@ p1{
 /* tittles cards */
 h3{
     color: var(--color-white);
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Gentium Basic', serif;
     font-size: clamp(1.125rem, 0.9635rem + 0.8077vw, 1.438rem);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     /* CLAMP 940px*/
     /* font-size: clamp(1.125rem, 1.0514rem + 0.3682vw, 1.438rem); */
     /* CLAMP 1680px*/
     /* font-size: 1.438rem; */
     /* CLAMP 320px*/
     /* font-size: 1.125rem; */
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     padding: 0%;
+    margin-bottom: 0.2rem !important;
     border: var(--border);
 }
 h6{
@@ -154,10 +157,10 @@ h6{
     margin: 0%;
 }
 
-a1{
+a1, button{
     color: var(--color-white);
     text-decoration: none;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Gentium Basic', serif;
     /* CLAMP 1680px*/
     font-size: 1.125rem;
     /* CLAMP 375px*/
@@ -233,39 +236,6 @@ main a h2{
     padding: 5% 10%;
     text-align: center;
     border: linear-gradient(96.41deg, #B69D40 0%, rgba(57, 76, 78, 0.5) 100%);
-}
-
-
-/* intro */
-.intro{
-    grid-column: 1/-1;
-    grid-row: 2;
-    height: 60vh;
-    max-width: var(--maxwidth);
-    margin: 0% auto;
-    padding: 0% var(--padding);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 10%;
-    /* decor */
-    background: linear-gradient(360deg, rgba(14, 73, 81, 0) 0%, rgba(14, 73, 81, 0.411458) 46.65%, #0E4951 88.4%);
-    box-shadow: 0px 0px 8px rgba(54, 76, 79, 0.8);
-    backdrop-filter: blur(1px);
-    border: 1px solid linear-gradient(156.79deg, rgba(214, 214, 214, 0.67) 0%, rgba(125, 125, 125, 0.62) 100%);
-}
-.intro div{
-    /* fonts */
-    padding: 10% 0%;
-}
-.intro_img{
-    grid-column: 1;
-    background-image: url('/css/img/SquareJonas.png');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position-x: 50%;
-    border: var(--border);
-    border-radius: 50%;
-
 }
 /* services */
 .services{
@@ -1027,7 +997,7 @@ footer>*{
     margin: 0% auto;
     border: var(--border);
 }
-footer>section>h1{
+footer h1{
     text-transform: none;
 }
 footer h3{
@@ -1234,3 +1204,111 @@ footer p:last-child{
     servicescard.style.background = 'none';  
   }
  */
+
+
+ /* portfolio */
+ .portfolio{
+     background: rgba(0, 0, 0, 0.5);
+ }
+/* reviews */
+ .reviews{
+    background: rgba(0, 0, 0, 0.4);
+}
+/* intro */
+.intro{
+    grid-column: 1/-1;
+    grid-row: 2;
+
+    max-width: var(--maxwidth);
+
+    margin: 0% auto;
+    padding: 0% var(--padding);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(360deg, rgba(14, 73, 81, 0) 0%, rgba(14, 73, 81, 0.411458) 46.65%, #0E4951 88.4%);
+}
+.intro *{
+    /* background: rgba(153, 205, 50, 0.4); */
+}
+.intro>section{
+    margin: 0%;
+    /* background: rgba(238, 130, 238, 0.2); */
+}
+.intro article{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8%;
+}
+.intro article:last-child{
+    margin-bottom: 0%;
+}
+.intro article *{
+    margin: 0% auto;
+    text-align: center;
+}
+
+.intro h1{
+    text-transform: none;
+    border: var(--border);
+    padding: 8% 0% 5% 0%;
+}
+.presentation_card{
+    padding: 8%;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    line-height: 1.7rem;
+    border: 1px solid var(--color-white-decor--card);
+}
+
+.intro_img{
+    background-image: url('/css/img/jonasport.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 15%;
+    opacity: 0.9;
+    border-radius: 50%;
+    border: var(--border);
+    padding-top: 80%;
+    width: 80%;
+    margin-bottom: 8% !important;
+    border: 1px solid var(--color-white-decor--card);
+}
+#more{
+    display: none;
+}
+
+.aboutme{
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 8%;
+    border: 1px solid var(--color-white-decor--card);
+}
+.atsalon{
+    padding: 8%;
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border: 1px solid var(--color-white-decor--card);
+}
+.salon_swiper{
+    height: auto;
+    width: 100%;
+}
+.atsalon_text{
+    padding-top: 0.9rem;
+}
+.atsalon_text *{
+    text-align: center;
+}
+.salon_slide img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.intro .swiper-pagination{
+    /* background: chartreuse; */
+}

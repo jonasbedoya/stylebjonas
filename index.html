@@ -19,13 +19,9 @@
     <a href="https://api.whatsapp.com/send?phone=31627587343&text=Hi%20Jonas!%20I%20would%20love%20to%20schedule%20an%20appointment!"class="whatsapp_float" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <main>
         <div class="logo">
-            <!-- <img src="/css/img/StyleBjonasLogoFei.png" alt="Logo"> -->
         </div>
-        <!-- slider -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
+        <div class="swiper swiper_main">
             <div class="swiper-wrapper">
-              <!-- Slides -->
               <div class="swiper-slide">
                   <section class="slide slide_1">
                     <h6>Revitalize your <h6 id="changeword">beauty</h6></h6> 
@@ -58,25 +54,74 @@
                   </section>
               </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- If we need navigation buttons -->
+            <div class="swiper-pagination pagination_main"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
-        <!-- slider -->
     </main>
+    <section class="intro">
+        <section>
+            <h1>Bienvenidos</h1>
+            <!-- <h1>A bit about me</h1> -->
+            <article class="presentation_card">
+                <div class="intro_img"></div>
+                <h3>Jonas Bedoya</h3>
+                <p>Colorist & Hair Designer</p>
+                <p>+15y experience</p>
+            </article>
+            <article class="aboutme">
+                <h3>About me</h3>
+                <p>15 years ago I started my journey in the hair and beauty industry in the beautiful Barcelona and, for the last 3 years I have been working in another gorgeous city of Amsterdam.<span id="dots">..</span>
+                    <span id="more">
+                        Hairdressing is not just about cutting and coloring your hair. I have a passion for hairstyling and the artistry that 
+                        comes with it. What makes my clients comfortable is my passion, dedication, hard work and ability to customize your salon experience 
+                        to fit your needs. An essential part of my job is the consultation where I establish what my clients want.   
+                        During my treatment I use the best Davines products that will make your hair stronger, shiny, adding volume and sleekness. 
+                        I use a wide pallet of styling and coloring techniques to make your hair look rich and stylish.
+                    </span>
+                </p>
+                <button onclick="readmoreintro()" id="myBtn">Read more</button>
+            </article>
+            <article class="atsalon">
+                <h3>Private Salon</h3>
+                <div class="swiper salon_swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide salon_slide"><img src="/css/img/salon1.jpg" alt="salon"></div>
+                    <div class="swiper-slide salon_slide"><img src="/css/img/salon2.jpg" alt="salon2"></div>
+                    <div class="swiper-slide salon_slide"><img src="/css/img/salon3.jpg" alt="salon3"></div>
+                    <div class="swiper-slide salon_slide"><img src="/css/img/salon4.jpg" alt="salon4"></div>
+                    <div class="swiper-slide salon_slide"><img src="/css/img/salon5.jpg" alt="salon5"></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <article class="atsalon_text">
+                    <p>At the salon you can expect a private space where you are the center of attention. A calm and relaxing ambient that create a unique experience. </p>
+                    <p>A drink of your choice: Sparkling Water, Coffee, Tea, Wine</p>    
+                </article>
+            </article>
+        </section>
+    </section>
+    <script>
+        function readmoreintro() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
 
-    <!-- <section class="intro">
-        <div class="intro_img"></div>
-        <div>
-            <p1>Bienvenidos</p1>
-            <p>This is Jonas, your new hairstylist.
-            <br>Born in Costa Rica, grew up in Barcelona and now living in Amsterdam. 
-            <br>For me hair, is a whole experience...
-            <br>When you come to my studio you can expect...</p>    
-        </div>
-    </section> -->
+            if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more"; 
+            moreText.style.display = "none";
+            } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less"; 
+            moreText.style.display = "inline";
+            }
+        }
+
+    </script>
     <section class="services">
         <h1>Services</h1>
         <!-- <section class="services_card services_animation"> -->
@@ -184,6 +229,12 @@
             </article>
         </section>
     </section>
+    <section class="portfolio">
+        <h1>Portfolio</h1>
+    </section>
+    <section class="reviews">
+        <h1>Reviews</h1>
+    </section>
     <section class="season_promotions">
         <h1>Season promotions</h1>    
         <section>
@@ -213,7 +264,11 @@
     </section>
     <footer>
         <section class="contactme">
-            <h1>See you soon!</h1>
+            <article>
+                <h1>See you soon</h1>
+                <p>I can’t wait to welcome you into my studio where you can relax and enjoy your well-deserved treatment.</p>    
+                <p></p>
+            </article>
             <section class="socialslinks">
                 <article><a class="mapslink" href="https://www.google.com/maps/place/Willem+de+Zwijgerlaan+334,+1055+RD+Amsterdam/@52.3809062,4.8586035,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5e27a571b7c43:0x1b6ba83a187d0fe0!8m2!3d52.3809062!4d4.8607922">Get directions</a></article>
                 <article class="socials">

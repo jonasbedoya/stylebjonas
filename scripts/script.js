@@ -201,17 +201,17 @@ function displayservicemenu(){
 
 // responsive
 // responsive();
-function responsive() {
-  if (screen.width <= 500) { // If media query matches
-    document.body.style.backgroundColor = "yellow";
-  } else {
-    document.body.style.backgroundColor = "pink";
-  }
-}
+// function responsive() {
+//   if (screen.width <= 500) { // If media query matches
+//     document.body.style.backgroundColor = "yellow";
+//   } else {
+//     document.body.style.backgroundColor = "pink";
+//   }
+// }
 
 
 // slider
-const swiper = new Swiper('.swiper', {
+const swiper_main = new Swiper('.swiper_main', {
   // Navigation arrows
   grabCursor: true,
   loop: true,
@@ -224,6 +224,23 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.swiper-button-prev',
   },
   pagination: {
+    el: ".pagination_main",
+    clickable: true,
+  }
+  ,autoplay: {
+    delay: 5000,
+  }
+});
+// slider pics salon
+const swiper_salon = new Swiper('.salon_swiper', {
+  // Navigation arrows
+  grabCursor: true,
+  loop: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
+  keyboard: true,
+  pagination: {
     el: ".swiper-pagination",
     clickable: true,
   }
@@ -231,6 +248,7 @@ const swiper = new Swiper('.swiper', {
     delay: 5000,
   }
 });
+
 // slide1 animation
 const changeword = document.getElementById('changeword');
 let texts = ['beauty','soul']

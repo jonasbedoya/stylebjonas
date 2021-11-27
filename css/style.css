@@ -23,13 +23,21 @@
     --border: var(--show) solid #ff4ee292;
     --border-section: var(--show) solid #ffc3f5;
     /* colors */
-    --color-white: rgba(255, 255, 255, 0.8);
+    --color-white: rgba(255, 255, 255, 0.85);
     --color-white-decor: rgba(255, 255, 255, 0.63);
     --bg: #FFFF;
     /* services decor */
     --services-card-res: rgba(4, 38, 15, 0.3);
     --treatments-card-res: rgba(38, 35, 4, 0.3);
     --color-white-decor--card: rgba(255, 255, 255, 0.25);
+    --border-card: 1px solid rgba(205, 205, 205, 0.3);
+    /* color palette */
+    --color-opacity: 0.3;
+    --color01: rgba(2, 81, 89, var(--color-opacity));
+    --color02: rgba(2, 115, 115, var(--color-opacity));
+    --color03: rgba(2, 115, 104, var(--color-opacity));
+    --color04: rgba(166, 156, 18, var(--color-opacity));
+    --color05: rgba(140, 117, 3, var(--color-opacity));
 }
 @media screen and (max-width: 550px) {
     :root {
@@ -38,9 +46,9 @@
 }
 body{
     /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/css/img/background.jpg'); */
-    background: linear-gradient(180deg, #0E4951 0%, rgba(14, 73, 81, 0) 100%), linear-gradient(140.4deg, #0E4951 20.13%, rgba(14, 73, 81, 0) 77.37%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(252.44deg, #2FBFA5 0%, #21777A 100%), linear-gradient(0deg, #0E4951, #0E4951);    background-attachment: fixed;
-    grid-template-columns: auto;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(161.69deg, #015159 20.9%, #019788 100%);    grid-template-columns: auto;
     grid-template-rows: auto;
+    background-attachment: fixed;
 }
 /* animation */
 .diss{
@@ -170,13 +178,13 @@ a1, button{
     border-radius: 14px;
     padding: 2% 4%;
     /* CLAMP */
-    background: rgba(255, 255, 255, 0.187);
+    background: var(--color05);
     text-align: center;
     cursor: pointer;
-    border: 1px solid var(--color-white-decor--card);
+    border: var(--border-card);
 }
 a1:hover{
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--color04);
 }
 
 /* Displaying */
@@ -226,7 +234,7 @@ main a{
     
 }
 
-main a h2{
+/* main a h2{
     display: block;
     background:  rgba(140, 116, 23, 0.57);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -237,7 +245,7 @@ main a h2{
     padding: 5% 10%;
     text-align: center;
     border: linear-gradient(96.41deg, #B69D40 0%, rgba(57, 76, 78, 0.5) 100%);
-}
+} */
 /* services */
 .services{
     /* positioning */
@@ -254,7 +262,6 @@ main a h2{
     grid-template-rows: auto;
     /* useful */
     /* background: linear-gradient(228.04deg, rgba(24, 102, 113, 0.4) 26.33%, rgba(51, 150, 137, 0.7) 92.46%),rgba(0, 0, 0, 0.4);    background: linear-gradient(180deg, rgba(24, 102, 113, 0.8) 0%, #339689 100%), #000000; */
-    background: transparent;
     border: var(--border);
 }
 
@@ -397,7 +404,7 @@ main a h2{
         padding: 4%;
         border: 1px solid var(--color-white-decor--card);
 
-        background: var(--services-card-res);
+        background: var(--color03);
     }
     .services_card_sect>article{
         display: flex;
@@ -509,7 +516,7 @@ a2{
     margin-right: 5%;
 
     text-align: center;
-    background: var(--treatments-card-res);
+    background: var(--color04);
     border-radius: 15px;
     border: 1px solid var(--color-white-decor--card);  
 }
@@ -520,7 +527,7 @@ a2{
 .card_img_flam, .card_img_rehab, .card_img_kera{
     height: 10rem;
     border: var(--border);
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--color01);
     background-size: auto 85%;
     background-repeat: no-repeat;
     background-position: center;
@@ -832,7 +839,7 @@ section>.list_prices{
         justify-content: center;
         padding: 2% 5%;
         /* text-transform:uppercase; */
-        background: rgba(255, 255, 255, 0.2);
+        background: var(--color05);
     }
     .services_card_sect>article>a1{
         margin: 3% auto 1% auto;
@@ -890,11 +897,11 @@ footer h3{
     cursor: pointer;
     padding: 2% 4%;
     text-align: center;
-    background: rgba(255, 255, 255, 0.187);
+    background: var(--color04);
     border: 1px solid var(--color-white-decor--card);
 }
 .mapslink:hover{
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--color05);
 }
 .contactme>h1, .socialslinks *{
     margin-bottom: 1.8rem;
@@ -1065,7 +1072,9 @@ footer p:last-child{
 }
 /* portfolio */
 .portfolio{
-     background: rgba(0, 0, 0, 0.5);
+     background: rgba(0, 0, 0, 0.4);
+     border-top-left-radius: 25px;
+     border-top-right-radius: 25px;
 }
 .portfolio img{
     height: auto;
@@ -1092,6 +1101,8 @@ footer p:last-child{
 /* reviews */
 .reviews{
     background: rgba(0, 0, 0, 0.4);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 .textimonials_wrapper{
     display: flex;
@@ -1140,14 +1151,9 @@ footer p:last-child{
 
     display: flex;
     flex-direction: column;
-    background: linear-gradient(360deg, rgba(14, 73, 81, 0) 0%, rgba(14, 73, 81, 0.411458) 46.65%, #0E4951 88.4%);
-}
-.intro *{
-    /* background: rgba(153, 205, 50, 0.4); */
 }
 .intro>section{
     margin: 0%;
-    /* background: rgba(238, 130, 238, 0.2); */
 }
 .intro article{
     display: flex;
@@ -1161,7 +1167,6 @@ footer p:last-child{
     margin: 0% auto;
     text-align: center;
 }
-
 .intro h1{
     text-transform: none;
     border: var(--border);
@@ -1169,13 +1174,13 @@ footer p:last-child{
 }
 .presentation_card{
     padding: 8%;
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--color03);
     border-radius: 40px;
     line-height: 1.7rem;
-    border: 1px solid var(--color-white-decor--card);
-    overflow: hidden;
+    border: 2px solid;
+    border: var(--border-card);
+    /* backdrop-filter: blur(140px); */
 }
-
 .intro_img{
     background-image: url('/css/img/jonasport.jpg');
     background-repeat: no-repeat;
@@ -1183,31 +1188,31 @@ footer p:last-child{
     background-position: center 15%;
     opacity: 0.9;
     border-radius: 50%;
-    border: var(--border);
     padding-top: 80%;
     width: 80%;
     margin-bottom: 8% !important;
-    border: 1px solid var(--color-white-decor--card);
+    border: var(--border-card);
+    /* border: var(--border); */
 }
 #more{
     display: none;
 }
 
 .aboutme{
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--color03);
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
     padding: 8%;
-    border: 1px solid var(--color-white-decor--card);
+    border: var(--border-card);
 }
 .aboutme p, .atsalon p{
     text-align: left;
 }
 .atsalon{
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--color03);
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
-    border: 1px solid var(--color-white-decor--card);
+    border: var(--border-card);
 }
 .salon_swiper{
     border-top-right-radius: 40px;

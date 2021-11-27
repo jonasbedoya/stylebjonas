@@ -32,10 +32,10 @@
     --color-white-decor--card: rgba(255, 255, 255, 0.25);
     --border-card: 1px solid rgba(205, 205, 205, 0.3);
     /* color palette */
-    --color-opacity: 0.3;
-    --color01: rgba(2, 81, 89, var(--color-opacity));
-    --color02: rgba(2, 115, 115, var(--color-opacity));
-    --color03: rgba(2, 115, 104, var(--color-opacity));
+    --color-opacity: 0.22;
+    --color01: rgba(2, 81, 89, 0.3);
+    --color02: rgba(2, 115, 115, 0.3);
+    --color03: rgba(2, 115, 104, 0.3);
     --color04: rgba(166, 156, 18, var(--color-opacity));
     --color05: rgba(140, 117, 3, var(--color-opacity));
 }
@@ -400,7 +400,7 @@ main a{
         height: auto;
         width: auto;
 
-        border-radius: 15px;
+        border-radius: 30px;
         padding: 4%;
         border: 1px solid var(--color-white-decor--card);
 
@@ -444,25 +444,11 @@ main a{
         width: 100%;
         flex: 1 0 35%;
         background-size: 80% auto;
-        border-radius: 15px;
+        border-radius: 30px;
     }
     .services p1, .services h3, .services a1{
         text-align: center;
     }
-}
-
-/* animations */
-a2{
-    display: none;
-    cursor: pointer;
-    grid-column: 10;
-    grid-row: 1;
-    z-index: 10;
-    margin: auto;
-    margin-top: 0%;
-    margin-right: 0%;
-    padding: 10px;
-    border-radius: 20px;
 }
 /* seasonal promotions */
 .season_promotions{
@@ -516,8 +502,8 @@ a2{
     margin-right: 5%;
 
     text-align: center;
-    background: var(--color04);
-    border-radius: 15px;
+    background: var(--color05);
+    border-radius: 30px;
     border: 1px solid var(--color-white-decor--card);  
 }
 
@@ -527,12 +513,11 @@ a2{
 .card_img_flam, .card_img_rehab, .card_img_kera{
     height: 10rem;
     border: var(--border);
-    background: var(--color01);
+    background: var(--color03);
     background-size: auto 85%;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 15px;
-    border: var(--border);
+    border-radius: 30px;
     margin-bottom: 3%;
 }
 .card_img_flam{
@@ -549,6 +534,8 @@ a2{
 /* work time */
 .wt_bg{
     background: rgba(0, 0, 0, 0.6);
+    border-top: var(--border-card);
+    border-bottom: var(--border-card);
 }
 .worktime{
     display: grid;
@@ -834,7 +821,7 @@ section>.list_prices{
 @media screen and (max-width: 550px) {
     a1{
         text-decoration: none;
-        border-radius: 980px;
+        border-radius: 30px;
         display: flex;
         justify-content: center;
         padding: 2% 5%;
@@ -862,7 +849,7 @@ footer{
     grid-row: 6;
     min-height: 300px;
     background: rgba(0, 0, 0, 0.7);
-    border: var(--border);
+    border-top: var(--border-card);
 
     display: flex;
     flex-direction: column;
@@ -882,6 +869,7 @@ footer>*{
 }
 footer h1{
     text-transform: none;
+    margin: 1.8rem;
 }
 footer h3{
     text-transform: none;
@@ -893,7 +881,7 @@ footer h3{
     margin: auto;
     width: fit-content;
     font-size: 1.125rem;
-    border-radius: 980px;
+    border-radius: 30px;
     cursor: pointer;
     padding: 2% 4%;
     text-align: center;
@@ -983,7 +971,7 @@ footer p:last-child{
     min-width: 100%;
     margin: auto;
     border: var(--border);
-    border-radius: 15px;
+    border-radius: 30px;
 }
 .slide{
     display: flex;
@@ -1023,7 +1011,7 @@ footer p:last-child{
     min-height: 2em;
     bottom: 4%;
     right: 4%;
-	background-color:#1e7162d9;
+	background-color: var(--color01);
 	color:var(--color-white-decor);
 	border-radius:50px;
 	text-align:center;
@@ -1075,6 +1063,7 @@ footer p:last-child{
      background: rgba(0, 0, 0, 0.4);
      border-top-left-radius: 25px;
      border-top-right-radius: 25px;
+     border-top: var(--border-card);
 }
 .portfolio img{
     height: auto;
@@ -1103,6 +1092,7 @@ footer p:last-child{
     background: rgba(0, 0, 0, 0.4);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    border-bottom: var(--border-card);
 }
 .textimonials_wrapper{
     display: flex;
@@ -1111,7 +1101,7 @@ footer p:last-child{
     scroll-snap-type: x mandatory;  
     scroll-padding: 0 var(--padding) 0 var(--padding);
 
-    padding: 5% var(--padding);
+    padding: 2% 0% 10% var(--padding);
     border: var(--border);
 
     -ms-overflow-style: none;  /* IE and Edge */
@@ -1128,11 +1118,10 @@ footer p:last-child{
     scroll-snap-align: start;
 
     text-align: center;
-    border-radius: 15px;
+    border-radius: 30px;
     padding: 4%;
-    /* background: rgba(0, 0, 0, 0.6); */
-    margin: auto;
-    /* border: 1px solid var(--color-white-decor--card); */
+    background: var(--color02);
+    margin: auto 5% auto 0%;
 }
 .card_testimonials:not(:last-child){
     margin-bottom: 1rem;

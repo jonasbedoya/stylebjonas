@@ -33,30 +33,10 @@
                     <h6>Happy clienteles</h6>
                   </section>
               </div>
-              <div class="swiper-slide">
-                  <section class="slide slide_3">
-                    <article class="card_testimonials">
-                        <h3>Balayage</h3>
-                        <p>Best balayage I had so far! Nice highlighting and transition to natural hair color. Recommend :)</p>
-                        <p>★★★★★</p>
-                    </article>
-                    <article class="card_testimonials">
-                        <h3>Ladies' Haircuts</h3>
-                        <p>Jonas was very nice! He gave me the best head massage when washing my hair. Took the time for me and felt very professional. Will definitely come back!</p>
-                        <p>★★★★★</p>
-                    </article>
-                    <article class="card_testimonials">
-                        <h3>Men's Haircut</h3>
-                        <p>Very relaxed and comfortable atmosphere. I felt very at ease and Jonas did a great job!</p>
-                        <p>★★★★★</p>
-                    </article>
-                    <h6>Testimonials</h6>
-                  </section>
-              </div>
             </div>
             <div class="swiper-pagination pagination_main"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-button-prev"></div> -->
+            <!-- <div class="swiper-button-next"></div> -->
           </div>
     </main>
     <section class="intro">
@@ -67,15 +47,17 @@
                 <div class="intro_img"></div>
                 <h3>Jonas Bedoya</h3>
                 <p>Colorist & Hair Designer</p>
-                <p>+15y experience</p>
+                <p>+15 years of experience</p>    
             </article>
             <article class="aboutme">
                 <h3>About me</h3>
                 <p>15 years ago I started my journey in the hair and beauty industry in the beautiful Barcelona and, for the last 3 years I have been working in another gorgeous city of Amsterdam.<span id="dots">..</span>
                     <span id="more">
-                        Hairdressing is not just about cutting and coloring your hair. I have a passion for hairstyling and the artistry that 
+                        <br>Hairdressing is not just about cutting and coloring your hair. I have a passion for hairstyling and the artistry that 
                         comes with it. What makes my clients comfortable is my passion, dedication, hard work and ability to customize your salon experience 
-                        to fit your needs. An essential part of my job is the consultation where I establish what my clients want.   
+                        to fit your needs.  
+                        <br>
+                        An essential part of my job is the consultation where I establish what my clients want.   
                         During my treatment I use the best Davines products that will make your hair stronger, shiny, adding volume and sleekness. 
                         I use a wide pallet of styling and coloring techniques to make your hair look rich and stylish.
                     </span>
@@ -83,7 +65,6 @@
                 <button onclick="readmoreintro()" id="myBtn">Read more</button>
             </article>
             <article class="atsalon">
-                <h3>Private Salon</h3>
                 <div class="swiper salon_swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
@@ -92,14 +73,13 @@
                     <div class="swiper-slide salon_slide"><img src="/css/img/salon2.jpg" alt="salon2"></div>
                     <div class="swiper-slide salon_slide"><img src="/css/img/salon3.jpg" alt="salon3"></div>
                     <div class="swiper-slide salon_slide"><img src="/css/img/salon4.jpg" alt="salon4"></div>
-                    <div class="swiper-slide salon_slide"><img src="/css/img/salon5.jpg" alt="salon5"></div>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
                 <article class="atsalon_text">
-                    <p>At the salon you can expect a private space where you are the center of attention. A calm and relaxing ambient that create a unique experience. </p>
-                    <p>A drink of your choice: Sparkling Water, Coffee, Tea, Wine</p>    
+                    <h3>Private Studio</h3>
+                    <p>At the salon you can expect a private space where you are the center of attention. A calm and relaxing ambient that create a unique experience. A drink of your choice.</p>
                 </article>
             </article>
         </section>
@@ -212,6 +192,23 @@
             </section>  
         </section>
     </section>
+    <section class="portfolio">
+        <h1 class="tittle_section">Portfolio</h1>
+        <section class="portfolio_wrapper">
+            <article class="columflexgrid_portfolio">
+                <img src="/css/img/clientblonde.png" alt="">
+                <img src="/css/img/clientbrown.png" alt="">    
+            </article>
+            <article class="columflexgrid_portfolio">
+                <img src="/css/img/clientblonde.png" alt="">
+                <img src="/css/img/clientbrown.png" alt="">    
+            </article>
+            <article class="columflexgrid_portfolio">
+                <img src="/css/img/clientbrown.png" alt="">
+                <img src="/css/img/clientblonde.png" alt="">
+            </article>
+        </section>
+    </section>
     <section class="wt_bg">
         <section class="worktime">
             <article>
@@ -229,36 +226,79 @@
             </article>
         </section>
     </section>
-    <section class="portfolio">
-        <h1>Portfolio</h1>
-    </section>
     <section class="reviews">
-        <h1>Reviews</h1>
+        <h1 class="tittle_section">Reviews</h1>
+        <section class="textimonials_wrapper">
+            <section class="columflexgrid_reviews">
+                <article class="card_testimonials">
+                    <h3>Balayage</h3>
+                    <p>Best balayage I had so far! Nice highlighting 
+                        and transition to natural hair color. Recommend :)</p>
+                    <p>★★★★★</p>
+                </article>
+                <article class="card_testimonials">
+                    <h3>Men's Haircut</h3>
+                    <p>Very good haircut! Jonas understood exactly what 
+                        I came for, and the atmosphere in his studio 
+                        was very relaxed</p>
+                    <p>★★★★★</p>
+                </article>
+            </section>
+            <section class="columflexgrid_reviews">
+                <article class="card_testimonials">
+                    <h3>Men's Haircut</h3>
+                    <p>Very relaxed and comfortable atmosphere. I felt 
+                        very at ease and Jonas did a great job!</p>
+                    <p>★★★★★</p>
+                </article>
+                <article class="card_testimonials">
+                    <h3>Ladies Haircut</h3>
+                    <p>Jonas was very nice! He gave me the best head 
+                        massage when washing my hair. Took the time for 
+                        me and felt very professional. Will definitely come back!</p>
+                    <p>★★★★★</p>
+                </article>
+            </section>
+            <section class="columflexgrid_reviews">
+                <article class="card_testimonials">
+                    <h3>Ladies Haircuts</h3>
+                    <p>Jonas was very nice, he listened to my wishes, 
+                        gave good imput and I am very happy with the result!</p>
+                    <p>★★★★★</p>
+                </article>
+                <article class="card_testimonials">
+                    <h3>Ladies Highlights</h3>
+                    <p>Very nice salon and guy! Was an absolute sweetheart 
+                        to my 10 month old daughter and i felt at home directly!</p>
+                    <p>★★★★★</p>
+                </article>
+            </section>
+        </section>
     </section>
     <section class="season_promotions">
         <h1>Season promotions</h1>    
-        <section>
+        <section class="promotions_wrapper">
             <div class="card">
                 <div class="card_img_flam"></div>
-                <section>
+                <article>
                     <h3>Flamboyage</h3>
                     <p>One of the latest hair colour technique for those who want a truly blended, natural looking highlights.</p>    
-                </section>
+                </article>
             </div>
             <div class="card">
                 <div class="card_img_rehab"></div>
-                <section>
+                <article>
                     <h3>Rehab</h3>
                     <p>Hair cut + Regenerating hair mask with immediate action. Perfect for all hair types, when in a hurry.</p>    
-                </section>
+                </article>
             </div>
             <div class="card">
                 <div class="card_img_kera"></div>
-                <section>
+                <article>
                     <h3>Brazilian Blow Out</h3>
                     <p>Restores the health of your hair and offers an absolute and shiny smoothness for frizz-free hair for 6 months.
                     </p>    
-                </section>
+                </article>
             </div>
         </section>
     </section>
@@ -270,7 +310,7 @@
                 <p></p>
             </article>
             <section class="socialslinks">
-                <article><a class="mapslink" href="https://www.google.com/maps/place/Willem+de+Zwijgerlaan+334,+1055+RD+Amsterdam/@52.3809062,4.8586035,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5e27a571b7c43:0x1b6ba83a187d0fe0!8m2!3d52.3809062!4d4.8607922">Get directions</a></article>
+                <article><a1 class="mapslink" href="https://www.google.com/maps/place/Willem+de+Zwijgerlaan+334,+1055+RD+Amsterdam/@52.3809062,4.8586035,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5e27a571b7c43:0x1b6ba83a187d0fe0!8m2!3d52.3809062!4d4.8607922">Get directions</a1></article>
                 <article class="socials">
                     <i class="fab fa-instagram" href="https://www.instagram.com/stylebjonas/?hl=en"></i>
                     <i class="fab fa-facebook"></i>

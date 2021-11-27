@@ -234,6 +234,10 @@ const swiper_main = new Swiper('.swiper_main', {
 // slider pics salon
 const swiper_salon = new Swiper('.salon_swiper', {
   // Navigation arrows
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
   grabCursor: true,
   loop: true,
   mousewheel: {

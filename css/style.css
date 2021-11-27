@@ -33,7 +33,7 @@
 }
 @media screen and (max-width: 550px) {
     :root {
-        --padding: 6%;
+        --padding: 4%;
     }
 }
 body{
@@ -100,7 +100,8 @@ p1{
     display: block;
     color: var(--color-white);
     font-family: 'Gentium Basic', serif;
-    font-size: clamp(1.063rem, 1.0026rem + 0.3019vw, 1.18rem);
+    font-size: 1rem;
+    /* font-size: clamp(1.063rem, 1.0026rem + 0.3019vw, 1.18rem); */
     letter-spacing: 0.5px;
     /* CLAMP 940px*/
     /* font-size: 1.18rem; */
@@ -282,10 +283,10 @@ main a h2{
     border: var(--border);
     margin: 0% 0% 5% 0%;
 }
-.services_card>section{
+/* .services_card>section{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-}
+} */
 .services_card_sect>article{
     grid-column: 2 / 4;
     display: flex;
@@ -318,7 +319,6 @@ main a h2{
 }
 .div_img{
     border: var(--border);
-    background: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -359,11 +359,11 @@ main a h2{
         grid-template-rows: auto;
     
         height: auto;
-        min-height: 100vh;
+        min-height: auto;
         background: transparent;
         margin: 2% 0% 5% 0%;
     }
-    .services>h1{
+    .services h1{
         border: var(--border);
         grid-column: 1/-1;
         grid-row: 1;
@@ -373,8 +373,10 @@ main a h2{
         display: flex;
         transform: none;  
     }
+
     .services_card{
         grid-column: 1/-1;
+        min-height: auto;
 
         display: flex;
         flex-direction: column-reverse;
@@ -386,12 +388,13 @@ main a h2{
     }
     .services_card_sect{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 
+        height: auto;
         width: auto;
 
-        border-radius: 40px;
-        padding: 8%;
+        border-radius: 15px;
+        padding: 4%;
         border: 1px solid var(--color-white-decor--card);
 
         background: var(--services-card-res);
@@ -400,43 +403,41 @@ main a h2{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        flex: 1 1 50%;
+
         height:auto;
         width: auto;
-        flex: 1 1 30%;
 
         padding-left: 0%;
-        border-radius: 40px;
+        border-radius: 15px;
     }
     .haircut, .treatments, .color{
         margin: 0%;
     }
     .haircut{
         order: 3;
-        margin: 0% auto;
     }
     .treatments{
+        flex-direction: row-reverse;
         order: 2;
-        margin: 0% auto;
     }
     .color{
         order: 1;
-    }
-    .services_card>section{
-        display: flex;
-        flex-direction: column;
     }
     .services_card>section:nth-child(4){
         margin: 1rem 0%;
     }
     .article_img_haircut, .article_img_treatment, .article_img_color{
-        flex: 1 1;
         margin-bottom: 6%;
     }
     .div_img{
         background-position: center;
         border-right: none;
-        padding: 60% 0% 0% 0%;
-        width: auto;
+        margin: auto;
+        width: 100%;
+        flex: 1 0 35%;
+        background-size: 80% auto;
+        border-radius: 15px;
     }
     .services p1, .services h3, .services a1{
         text-align: center;
@@ -460,78 +461,72 @@ a2{
 .season_promotions{
     grid-column: 2/12;
     grid-row: 5;
+
     display: grid;
     grid-template-columns: var(--margin) 1fr 1fr 1fr var(--margin);
     grid-template-rows: auto;
+    
     height: auto;
-    min-height: 80vh;
+    min-height: auto;
     max-width: var(--maxwidth);
-    padding: 0% var(--padding);
+
     margin: 0% auto 5% auto;
     border: var(--border);
 }
 .season_promotions>h1{
-    grid-column: 2/-2;
-    grid-row: 1;
-    height: fit-content;
-    margin: auto;
+    text-align: center;
+    margin: 0%;
+    padding: 10% var(--padding) 5% var(--padding);
     border: var(--border);
 }
-.season_promotions>h3{
-    margin: 0% 6% 0% 6%;
-    border: var(--border);
-}
-.season_promotions>section{
-    grid-column: 2/-2;
-    grid-row: 2;
+.promotions_wrapper{
     display: flex;
-    justify-content: center;
-    gap: 1%;
+    flex-direction: row;
+    overflow: auto;
+    padding: 5%;
+    scroll-snap-type: x mandatory;  
+    scroll-padding: 0 0 0 var(--padding);
+
+    /* padding: 5% var(--padding); */
     border: var(--border);
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.promotions_wrapper::-webkit-scrollbar {
+    display: none;
 }
 .card{
-    /* grid */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 1fr;
-    height: auto;
-    min-height: 30vh;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 50px;
-    /* decor */
-    border: 1px solid linear-gradient(156.79deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.33) 100%);
-}
-.card:nth-child(1){
-    border: 1px solid var(--color-white-decor--card);
-}
-.card:nth-child(2){
-    border: 1px solid var(--color-white-decor--card);
-}
-.card:nth-child(3){
-    border: 1px solid var(--color-white-decor--card);
-}
-.card>section>h3{
+    flex: 1 0 80%;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+
+
+    padding: 5%;
+    margin-right: 5%;
+
     text-align: center;
-    margin: 0% 6% 1% 6%;
+    background: var(--treatments-card-res);
+    border-radius: 15px;
+    border: 1px solid var(--color-white-decor--card);  
 }
-.card>section>p{
-    text-align: left;
-    margin: 0% 6% 0% 6%;
+
+.card:first-child{
+    margin-left: var(--padding);
 }
-.card>section{
-    display: flex;
-    flex-direction: column;
-    margin: 0% 6% 6% 6%;
-}
-.card_img_flam,.card_img_rehab, .card_img_kera{
-    background-size: contain;
+.card_img_flam, .card_img_rehab, .card_img_kera{
+    height: 10rem;
+    border: var(--border);
+    background: rgba(0, 0, 0, 0.2);
+    background-size: auto 85%;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 40%;
-    min-width: 1fr;
-    margin: 6% 6% 6% 6%;
+    border-radius: 15px;
     border: var(--border);
+    margin-bottom: 3%;
 }
 .card_img_flam{
     background-image: url('/css/svg/balayage.svg');
@@ -542,126 +537,7 @@ a2{
 .card_img_kera{
     background-image: url('/css/svg/keratina.svg');
 }
-@media screen and (max-width: 1300px) {
-    .season_promotions>section{
-        display: flex;
-        flex-direction: column;
-        gap: 0%;
-        border: var(--border);
-    }
-    .card{
-        flex-direction: row;
-        justify-content: center;
-        height: auto;
-        min-height: 25vh;
-        margin: 0%;
-        display: flex;
-    }
-    .card:nth-child(1){
-        /* margin-top: 6%; */
-    }
-    .card:nth-child(2){
-        /* margin: 3% 0%; */
-    }
-    .card:nth-child(3){
-        /* margin-bottom: 6%; */
-    }
-    .card_img_flam,.card_img_rehab, .card_img_kera{
-        flex: 1 0 45%;
-        background-size: 100% 80%;
-        background-repeat: no-repeat;
-        background-position: center;
-        min-height: auto;
-        padding-top: 25%;
-        min-width: 25%;
-        margin: 0%;
-        border: var(--border);
-    }
-    .card>section{
-        display: flex;
-        flex: 1 0 55%;
-        flex-direction: column;
-        margin: auto;
-        width: 60%;
-    }
-    .card>section>h3{
-        text-align: left;
-        margin: 0% 2% 0% 2%;
-    }
-    .card>section>p{
-        margin: 0% 2% 0% 2%;
-    }
-    .season_promotions>h1{
-        margin-top: 12%;
-        border: var(--border);
-    }
-}
 @media screen and (max-width: 550px) {
-    .season_promotions{
-        padding: 5% var(--padding);
-        min-height: 100vh;
-    }
-    .season_promotions section{
-        flex-direction: column;
-        margin-top: 5%;
-    }
-    .season_promotions>section{
-        background: transparent;
-    }
-    .card{
-        /* grid */
-        display: flex;
-        grid-column: 2/5;
-        flex-direction: column;
-        gap: 3%;
-        height:auto;
-        width: auto;
-        /* decor */
-        text-align: left;
-        padding: 5% 0%;
-        background: var(--treatments-card-res);
-        border-radius: 40px;
-        /* changes */
-        padding: 8%;
-    }
-    .card>section{
-        display: flex;
-        justify-content:center;
-        flex: 1 0 30%;
-        width: 100%;
-        margin: auto;
-    }
-    .card>section>h3{
-        border: var(--border);
-        margin: 0%;
-        text-align: center;
-    }
-    .card>section>p{
-        border: var(--border);
-        margin: 0%;
-        text-align: center;
-    }
-    .card_img_flam,.card_img_rehab, .card_img_kera{
-        flex: 1 1 70%;
-        border: var(--border);
-        background-size: 100% 100%;
-        width: auto;
-        padding: 55% 0% 0% 0%;
-        margin: 0%;
-    }
-    .season_promotions>h1{
-        text-align: center;
-        margin: 0%;
-        padding: 10% 0% 5% 0%;
-    }
-    .card:nth-child(2){
-        margin: 1rem 0%;
-        border-left: none;
-        border-right: none;
-    }
-    .season_promotions>section{
-        grid-row: 3;
-    }
 }
 /* work time */
 .wt_bg{
@@ -1089,27 +965,6 @@ footer p:last-child{
 .slide>.slide_2{
     flex-direction: column-reverse;
 }
-.card_testimonials{
-    border-radius: 15px;
-    padding: 3% 2.5%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(15px);
-}
-.card_testimonials:nth-child(1){
-    margin-top: auto;
-    margin-bottom: 0%;
-}
-.card_testimonials:nth-child(2){
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.card_testimonials:nth-child(3){
-    margin-top: 0%;
-    margin-bottom: auto;
-}
-.starts_test{
-    background-image: none;
-}
 /* third slider */
 .happy_clienteles{
     background-image: url('/css/img/clientblonde.png');
@@ -1205,14 +1060,71 @@ footer p:last-child{
   }
  */
 
-
- /* portfolio */
- .portfolio{
+.tittle_section{
+    padding: 8% var(--padding) 4%;
+}
+/* portfolio */
+.portfolio{
      background: rgba(0, 0, 0, 0.5);
- }
+}
+.portfolio img{
+    height: auto;
+    width: 10rem;
+    border-radius: 10px;
+    margin: 2%;
+}
+.portfolio_wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 5% var(--padding);
+    border: var(--border);
+
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.portfolio_wrapper::-webkit-scrollbar {
+    display: none;
+}
+.columflexgrid_portfolio{
+    margin: 2%;
+}
 /* reviews */
- .reviews{
+.reviews{
     background: rgba(0, 0, 0, 0.4);
+}
+.textimonials_wrapper{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    scroll-snap-type: x mandatory;  
+    scroll-padding: 0 var(--padding) 0 var(--padding);
+
+    padding: 5% var(--padding);
+    border: var(--border);
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.textimonials_wrapper::-webkit-scrollbar {
+    display: none;
+}
+.columflexgrid_reviews{
+    flex: 1 0 90%;
+    margin: auto;
+}
+.card_testimonials{
+    scroll-snap-align: start;
+
+    text-align: center;
+    border-radius: 15px;
+    padding: 4%;
+    /* background: rgba(0, 0, 0, 0.6); */
+    margin: auto;
+    /* border: 1px solid var(--color-white-decor--card); */
+}
+.card_testimonials:not(:last-child){
+    margin-bottom: 1rem;
 }
 /* intro */
 .intro{
@@ -1261,6 +1173,7 @@ footer p:last-child{
     border-radius: 40px;
     line-height: 1.7rem;
     border: 1px solid var(--color-white-decor--card);
+    overflow: hidden;
 }
 
 .intro_img{
@@ -1287,19 +1200,22 @@ footer p:last-child{
     padding: 8%;
     border: 1px solid var(--color-white-decor--card);
 }
+.aboutme p, .atsalon p{
+    text-align: left;
+}
 .atsalon{
-    padding: 8%;
     background: rgba(0, 0, 0, 0.25);
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
     border: 1px solid var(--color-white-decor--card);
 }
 .salon_swiper{
+    border-top-right-radius: 40px;
     height: auto;
     width: 100%;
 }
 .atsalon_text{
-    padding-top: 0.9rem;
+    padding:  0% 8% 8% 8%;
 }
 .atsalon_text *{
     text-align: center;
@@ -1312,3 +1228,4 @@ footer p:last-child{
 .intro .swiper-pagination{
     /* background: chartreuse; */
 }
+

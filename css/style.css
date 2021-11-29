@@ -38,6 +38,8 @@
     --color03: rgba(2, 115, 104, 0.3);
     --color04: rgba(166, 156, 18, var(--color-opacity));
     --color05: rgba(140, 117, 3, var(--color-opacity));
+    /* svg colors */
+    --svg-clr: rgb(9, 225, 249);
 }
 @media screen and (max-width: 550px) {
     :root {
@@ -504,41 +506,7 @@ section>.list_prices{
     display: none;
     padding: 8% 0%;
 }
-@media screen and (max-width: 550px) {
-    .haircut.active{
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        border: none;
-    }
-    .treatments.services_card_sect.active{
-        border-radius: 0px;
-        border: none;
-    }
-    .color.services_card_sect.active{
-        border-radius: 0px;
-        border: none;
-    }
-    .services_card_sect.active{
-        padding: 5%;
-        margin: 0%;
-        width: 90%;
-    }
-    .services_card.active{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .treatments.active, .color.active{
-        border-radius: 0px;
-    }
-    .services.active{
-        grid-template-columns:  var(--margin) 1fr 1fr 1fr var(--margin);
-        grid-template-rows: auto;
-    }
-    .halist_prices, .trlist_prices, .colist_prices{
-        grid-column: 1/-1;
-        grid-row: 4;
-    }
-}
+
 @media screen and (max-width: 550px) {
     a1{
         text-decoration: none;
@@ -940,7 +908,47 @@ footer p:last-child{
     height: 100%;
     width: 100%;
 }
+/* partners */
+.partners{
+    background: var(--color03);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border: var(--border-card);
 
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding) var(--padding) 10%;
+}
+.partners h1{
+    text-transform: none;
+    padding: 8% 0% 5% 0%;
+    margin: auto;
+    border: var(--border);
+}
+.partners p{
+    width: 80%;
+    text-transform: none;
+    margin: auto;
+    text-align: center;
+    border: var(--border);
+}
+.partners_images{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.partners_img{
+    margin: 2rem auto auto;
+
+    width: 55%;
+    height: auto;
+
+    border: var(--border);
+}
+.partners_img:nth-child(2){
+    width: 20%;
+}
 /* services */
 .services{
     display: flex;
@@ -1058,7 +1066,7 @@ footer p:last-child{
 
     overflow: auto;
     scroll-snap-type: x mandatory;  
-    scroll-padding: 0 10% 0 10%;
+    scroll-padding: 0 10%;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -1066,7 +1074,16 @@ footer p:last-child{
     display: none;
 }
 .list-prices{
-    flex: 1 0 90%;
+    flex: 1 0 75%;
     scroll-snap-align: start;
-    margin: auto 5%;
+    margin: auto;
+}
+.list-prices h3{
+    margin-left: -8px;
+}
+.list-prices p1{
+    font-style: italic;
+}
+.list-prices p{
+    margin-bottom: 0.5rem;
 }

@@ -30,7 +30,7 @@
     --services-card-res: rgba(4, 38, 15, 0.3);
     --treatments-card-res: rgba(38, 35, 4, 0.3);
     --color-white-decor--card: rgba(255, 255, 255, 0.25);
-    --border-card: 1px solid rgba(205, 205, 205, 0.3);
+    --border-card: 1px solid rgba(205, 205, 205, 0.2);
     /* color palette */
     --color-opacity: 0.22;
     --color01: rgba(2, 81, 89, 0.3);
@@ -246,211 +246,6 @@ main a{
     text-align: center;
     border: linear-gradient(96.41deg, #B69D40 0%, rgba(57, 76, 78, 0.5) 100%);
 } */
-/* services */
-.services{
-    /* positioning */
-    grid-column: 2;
-    grid-row: 3;
-    height: auto;
-    width: auto;
-    max-width: var(--maxwidth);
-    padding: 0% var(--padding);
-    margin: 0% auto;
-    /* grid */
-    display: grid;
-    grid-template-columns:  var(--margin) 1fr 1fr 1fr var(--margin);
-    grid-template-rows: auto;
-    /* useful */
-    /* background: linear-gradient(228.04deg, rgba(24, 102, 113, 0.4) 26.33%, rgba(51, 150, 137, 0.7) 92.46%),rgba(0, 0, 0, 0.4);    background: linear-gradient(180deg, rgba(24, 102, 113, 0.8) 0%, #339689 100%), #000000; */
-    border: var(--border);
-}
-
-.services>h1{
-    border: var(--border);
-    grid-column: 2/-2;
-    grid-row: 1;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 0% auto auto 0%;
-    padding-top: 8%;
-}
-.services>h3{
-    margin: 0;
-    border: var(--border);
-}
-.services_card{
-    grid-column: 2/-2;
-    grid-row: 2;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 650px;
-    justify-content: space-around;
-    border: var(--border);
-    margin: 0% 0% 5% 0%;
-}
-/* .services_card>section{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-} */
-.services_card_sect>article{
-    grid-column: 2 / 4;
-    display: flex;
-    flex-direction: column;
-    padding-left: 4%;
-    margin: auto 0%;
-    border: var(--border);
-}
-.services_card_sect>article>a1{
-    margin-top: 1%;
-    width: fit-content;
-}
-.active>article>h3:hover{
-    cursor: pointer;
-}
-.haircut, .treatments, .color{
-    width: 85%;
-}
-.haircut{
-    margin-right: auto;
-    margin-left: 0%;
-}
-.treatments{
-    margin-left: auto;
-    margin-right: auto;
-}
-.color{
-    margin-left: auto;
-    margin-right: 0%;
-}
-.div_img{
-    border: var(--border);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding: 55% 0% 0% 0%;
-    border-right: 1px solid var(--color-white-decor);
-    margin: 0%;
-}
-
-.article_img_haircut{
-    grid-column: 1;
-    background-image: url('/css/svg/haircut.svg');
-}
-.article_img_treatment{
-    grid-column: 1;
-    background-image: url('/css/svg/color.svg');
-}
-.article_img_color{
-    grid-column: 1;
-    background-image: url('/css/svg/treatments.svg');
-}
-#serv_back{
-    background: url('/css/svg/back.svg'), rgba(0, 0, 0, 0.4);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    height: 1em;
-    width: 1em;
-    order: 4;
-    grid-row: 1;
-    grid-column: 3;
-    margin: 0% 0% auto auto;
-    border: var(--border);
-}
-@media screen and (max-width: 550px) {
-    .services{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-    
-        height: auto;
-        min-height: auto;
-        background: transparent;
-        margin: 2% 0% 5% 0%;
-    }
-    .services h1{
-        border: var(--border);
-        grid-column: 1/-1;
-        grid-row: 1;
-        padding: 10% 0% 5% 0%;
-        margin: 0%;
-
-        display: flex;
-        transform: none;  
-    }
-
-    .services_card{
-        grid-column: 1/-1;
-        min-height: auto;
-
-        display: flex;
-        flex-direction: column-reverse;
-        border: var(--border);
-        margin: 0%;
-    }
-    .services_card.active>section:nth-child(4) {
-        margin: 0%;
-    }
-    .services_card_sect{
-        display: flex;
-        flex-direction: row;
-
-        height: auto;
-        width: auto;
-
-        border-radius: 30px;
-        padding: 4%;
-        border: 1px solid var(--color-white-decor--card);
-
-        background: var(--color03);
-    }
-    .services_card_sect>article{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex: 1 1 50%;
-
-        height:auto;
-        width: auto;
-
-        padding-left: 0%;
-        border-radius: 15px;
-    }
-    .haircut, .treatments, .color{
-        margin: 0%;
-    }
-    .haircut{
-        order: 3;
-    }
-    .treatments{
-        flex-direction: row-reverse;
-        order: 2;
-    }
-    .color{
-        order: 1;
-    }
-    .services_card>section:nth-child(4){
-        margin: 1rem 0%;
-    }
-    .article_img_haircut, .article_img_treatment, .article_img_color{
-        margin-bottom: 6%;
-    }
-    .div_img{
-        background-position: center;
-        border-right: none;
-        margin: auto;
-        width: 100%;
-        flex: 1 0 35%;
-        background-size: 80% auto;
-        border-radius: 30px;
-    }
-    .services p1, .services h3, .services a1{
-        text-align: center;
-    }
-}
-/* seasonal promotions */
 .season_promotions{
     grid-column: 2/12;
     grid-row: 5;
@@ -480,11 +275,10 @@ main a{
     scroll-snap-type: x mandatory;  
     scroll-padding: 0 0 0 var(--padding);
 
-    /* padding: 5% var(--padding); */
     border: var(--border);
 
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
 .promotions_wrapper::-webkit-scrollbar {
     display: none;
@@ -644,81 +438,8 @@ main a{
         transform: translateX(-50%);
     }
 }
-/* list prices */
 
-#haircut_list_prices{
-    padding: 18% 0%;
-}
-/* fonts */
-hs1, hs11, hs2, hs20, hs22, hs3, hs33{
-    font-family: 'Urbanist', sans-serif;
-    text-align: left;
-    color: var(--color-white);
-}
-hs1, hs2, hs3{
-    color: var(--color-white);
-    font-family: 'Urbanist', sans-serif;
-    font-size: clamp(1rem, 1.8vw, 1.4rem); 
-    font-weight: 400;
-    border: var(--border);
-}
-hs11, hs22, hs33{
-    color: var(--color-white);
-    font-family: 'Urbanist', sans-serif;
-    font-size: clamp(0.9rem, 1.8vw, 1.4rem); 
-    font-style: italic;
-    font-weight: 200;
-    border: var(--border);
-}
-hs10, hs20, hs30{
-    color: var(--color-white);
-    font-family: 'Della Respira', serif;
-    font-size: clamp(1.05rem, 1.8vw, 1.4rem); 
-    font-weight: 400;
-    margin-left: -6%;
-    margin-bottom: 3%;
-    border: var(--border);
-}
-hs1{
-    display: none;
-}
-hs10{
-    display: none;
-}
-hs11{
-    display: none;
-    margin-bottom: 6%;
-}
-hs20{
-    display: none;
-}
-hs2{
-    display: none;
-}
-hs22{
-    display: none;
-    margin-bottom: 6%;
-}
-hs3{
-    display: none;
-}
-hs33{
-    display: none;
-    margin-bottom: 6%;
-}
-/*  */
 
-    /* if (screen.width > 650) { // If media query matches
-        servicescard.style.display = 'grid';
-        servicescard.style.gridTemplateColumns = '1fr 1fr 1fr';
-        servicescard.style.gridTemplateRows = '70px auto';
-        haircutgrid.style.width = '100%';
-        haircutgrid.style.borderTopLeftRadius = '15px';
-        haircutgrid.style.borderTopRightRadius = 0;
-        treatmentsgrid.style.width = '100%';
-        colorgrid.style.width = '100%';
-        colorgrid.style.borderTopRightRadius = '15px';
-      } */
 .services_card.active{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1219,7 +940,133 @@ footer p:last-child{
     height: 100%;
     width: 100%;
 }
-.intro .swiper-pagination{
-    /* background: chartreuse; */
+
+/* services */
+.services{
+    display: flex;
+    flex-direction: column;
+
+    max-width: var(--maxwidth);
+
+    margin: 0% auto;
+    padding: 0% var(--padding);
+}
+.services h1{
+    border: var(--border);
+    padding: 8% 0% 5% 0%;
 }
 
+.services_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.services_card{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    height: auto;
+    width: auto;
+
+    border-radius: 30px;
+    padding: 4%;
+    border: var(--border-card);
+
+    background: var(--color03);
+}
+.services_card *{
+    margin: auto;
+}
+.services_card article{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+.services_card:nth-child(2){
+    flex-direction: row-reverse;
+}
+.services section:not(:last-child){
+    margin-bottom: 1.3rem;
+}
+.div_img{
+    flex: 1 0 40%;
+    border: var(--border);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    margin: 1%;
+    height: auto;
+    min-height: 9rem;
+
+    border-radius: 30px;
+    background-color: var(--color03);
+}
+.article_img_haircut{
+    grid-column: 1;
+    background-image: url('/css/svg/haircut.svg');
+}
+.article_img_treatment{
+    grid-column: 1;
+    background-image: url('/css/svg/color.svg');
+}
+.article_img_color{
+    grid-column: 1;
+    background-image: url('/css/svg/treatments.svg');
+}
+.button-menu{
+
+    display: flex;
+    width: fit-content;
+    margin: auto;
+
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: 'Gentium Basic', serif;
+    font-size: 1.125rem;
+    border-radius: 980px;
+    padding: 5%;
+    background: var(--color05);
+    text-align: center;
+    cursor: pointer;
+    border: var(--border-card);
+    margin-bottom: 1.3rem;
+}
+.button-menu::after{
+    content: 'Show Menu Prices';
+}
+#pricemenu:checked ~ .button-menu::after{
+    content: 'Hide Menu Prices';
+}
+#pricemenu:not(:checked) ~ .list-prices-wrapper{
+    display: none;
+}
+#pricemenu{
+    position: absolute;
+    left: -100px;
+    visibility: hidden;
+}
+.list-prices-wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 10%;
+    border: var(--border-card);
+
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+
+    margin-bottom: 1.3rem;
+
+    overflow: auto;
+    scroll-snap-type: x mandatory;  
+    scroll-padding: 0 10% 0 10%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.list-prices-wrapper::-webkit-scrollbar {
+    display: none;
+}
+.list-prices{
+    flex: 1 0 90%;
+    scroll-snap-align: start;
+    margin: auto 5%;
+}

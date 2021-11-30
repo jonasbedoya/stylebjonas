@@ -33,6 +33,7 @@
     --treatments-card-res: rgba(38, 35, 4, 0.3);
     --color-white-decor--card: rgba(255, 255, 255, 0.25);
     --border-card: 1px solid rgba(205, 205, 205, 0.2);
+    --br-crd-ba:0 0 3px rgba(166, 156, 18, 1);
     /* color palette */
     --opc-crd: 0.33;
     --clr-01: rgba(2, 81, 89, var(--opc-crd));
@@ -198,47 +199,28 @@ a1:hover{
 main{
     grid-column: 1 / -1;
     grid-row: 1;
-    height: 100vh;
+    height: auto;
     position: relative;
-    min-height: 500px;
+    min-height: 100vh;
     /* bg */
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/css/img/background.jpg');
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),url('/css/img/background.jpg');
     background-position: 100% 30%;
     background-size: cover;
     /* positioning */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 70px auto;
     border: var(--border);
-
 }
 .logo{
+    grid-column: 1/-1;
+    grid-row: 1;
     background-image: url(/css/img/StyleBjonasLogoFei.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto 80%;
-    position: relative;
-    height: 60px;
-    margin-top: 2%;
-}
-main img{
-    min-width: 180px;
-    display: flex;
-    margin: 5% auto 0%;
-    border: var(--border);
-    flex: 0;
-}
-main a{
-    grid-column: 2 / 3;
-    grid-row: 2;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    /*center vertically*/
-    position: relative;
-    top: 50%;
-    transform: translateY(-20%);
-    
+    background-size: auto 70%;
+    height: auto;
+    min-height: 70px;
 }
 /* season promotions */
 .season_promotions{
@@ -550,18 +532,31 @@ footer p:last-child{
 }
 /* slider */
 .swiper{
+    grid-column: 1/-1;
+    grid-row: 2;
     display: flex;
-    flex: auto;
     height: auto;
     width: 100%;
-    margin: 2% 0%;
+    margin: 0%;
+    border: var(--border);
+}
+.swiper-slide{
+    display: flex;
+    margin: 0%;
+}
+.slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
+    margin: auto;
+
+    max-width: var(--maxwidth);
     border: var(--border);
 }
 /* first slider */
 .slide_1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: auto;
 }
 .slide_1>h1{
@@ -596,18 +591,7 @@ footer p:last-child{
     border: var(--border);
     border-radius: 30px;
 }
-.slide{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-    width: auto;
-    height: 100%;
-    max-width: var(--maxwidth);
-    padding: 0% var(--padding);
-    margin: 0% auto;
-    border: var(--border);
-}
 #swiper-button-next{
     /* TODO */
 }
@@ -637,6 +621,10 @@ footer p:last-child{
     animation: changewidth 8s ease-in;
     animation-delay: 6s;
 }
+/* .whatsapp_float:hover ~ .bknw-bg{
+    animation: changewidth 8s ease-in;
+} */
+
 @keyframes changewidth {
     0% {
         transform: scaleX(0);
@@ -703,18 +691,30 @@ footer p:last-child{
 .tittle_section{
     padding: 8% var(--padding) 4%;
 }
-/* portfolio */
+/*                 <img src="/css/img/prt/prt01.jpg" alt="">
+                <img src="/css/img/prt/prtu03.jpg" alt="">                      
+            </article>
+            <article class="columflexgrid_portfolio">
+                <img src="/css/img/prt/prt03.jpg" alt="">
+                <img src="/css/img/prt/prt02.jpg" alt="">  
+            </article>
+            <article class="columflexgrid_portfolio">
+                <img src="/css/img/prt/prt05.jpg" alt="">
+                <img src="/css/img/prt/prtu05.jpg" alt=""> 
+            </article>
+            <article class="columflexgrid_portfolio">
+                <img src="/css/img/prt/prtu02.jpg" alt="">
+                <img src="/css/img/prt/prt04.jpg" alt="">  
+            </article>
+            <article class="columflexgrid_portfolio">
+                <img src="/css/img/prt/prtu04.jpg" alt="">
+                <img src="/css/img/prt/prtu01.jpg" alt="">  */
+/*|| portfolio */
 .portfolio{
      background: rgba(0, 0, 0, 0.4);
      border-top-left-radius: 25px;
      border-top-right-radius: 25px;
      border-top: var(--border-card);
-}
-.portfolio img{
-    height: auto;
-    width: 10rem;
-    border-radius: 10px;
-    margin: 2%;
 }
 .portfolio_wrapper{
     display: flex;
@@ -730,7 +730,98 @@ footer p:last-child{
     display: none;
 }
 .columflexgrid_portfolio{
-    margin: 2%;
+    flex: 1 0 10rem;
+	max-width: 15rem;
+	padding: 0 4px;
+}
+.prt-bx{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 12rem;
+    border-radius: 8px;
+}
+.columflexgrid_portfolio:nth-child(1) .prt-bx:nth-child(1){
+    background-image: url(/css/img/prt/prt01.jpg);
+    margin-bottom: 8px;
+    box-shadow: var(--br-crd-ba);
+    cursor: pointer;
+}
+.columflexgrid_portfolio:nth-child(1) .prt-bx:nth-child(1):hover{
+    background-image: url(/css/img/prt/prt011.jpg);
+    margin-bottom: 8px;
+}
+.columflexgrid_portfolio:nth-child(1) .prt-bx:nth-child(2){
+    background-image: url(/css/img/prt/prt022.jpg);
+    cursor: pointer;
+    box-shadow: var(--br-crd-ba);
+}
+.columflexgrid_portfolio:nth-child(1) .prt-bx:nth-child(2):hover{
+    background-image: url(/css/img/prt/prt02.jpg);
+}
+.columflexgrid_portfolio:nth-child(2) .prt-bx:nth-child(1){
+    background-image: url(/css/img/prt/prt03.jpg);
+    margin-bottom: 8px;
+    box-shadow: var(--br-crd-ba);
+    cursor: pointer;
+}
+.columflexgrid_portfolio:nth-child(2) .prt-bx:nth-child(1):hover{
+    background-image: url(/css/img/prt/prt033.jpg);
+}
+.columflexgrid_portfolio:nth-child(2) .prt-bx:nth-child(2){
+    background-image: url(/css/img/prt/prt04.jpg);
+    box-shadow: var(--br-crd-ba);
+    cursor: pointer;
+}
+.columflexgrid_portfolio:nth-child(2) .prt-bx:nth-child(2):hover{
+    background-image: url(/css/img/prt/prt044.jpg);
+}
+
+
+.columflexgrid_portfolio:nth-child(3) .prt-bx:nth-child(1){
+    background-image: url(/css/img/prt/prt05.jpg);
+    margin-bottom: 8px;
+    box-shadow: var(--br-crd-ba);
+    cursor: pointer;
+}
+.columflexgrid_portfolio:nth-child(3) .prt-bx:nth-child(1):hover{
+    background-image: url(/css/img/prt/prt055.jpg);
+}
+.columflexgrid_portfolio:nth-child(3) .prt-bx:nth-child(2){
+    background-image: url(/css/img/prt/prtu01.jpg);
+}
+
+
+.columflexgrid_portfolio:nth-child(4) .prt-bx:nth-child(1){
+    background-image: url(/css/img/prt/prtu02.jpg);
+    margin-bottom: 8px;
+}
+.columflexgrid_portfolio:nth-child(4) .prt-bx:nth-child(2){
+    background-image: url(/css/img/prt/prtu03.jpg);
+}
+
+
+
+.columflexgrid_portfolio:nth-child(5) .prt-bx:nth-child(1){
+    background-image: url(/css/img/prt/prtu04.jpg);
+    margin-bottom: 8px;
+}
+.columflexgrid_portfolio:nth-child(5) .prt-bx:nth-child(2){
+    background-image: url(/css/img/prt/prtu05.jpg);
+}
+
+
+.columflexgrid_portfolio:nth-child(6) .prt-bx:nth-child(1){
+    background-image: url(/css/img/prt/prtu06.jpg);
+    margin-bottom: 8px;
+}
+.columflexgrid_portfolio:nth-child(6) .prt-bx:nth-child(2){
+    background-image: url(/css/img/prt/prt06.jpg);
+    box-shadow:var(--br-crd-ba);
+    cursor: pointer;
+}
+.columflexgrid_portfolio:nth-child(6) .prt-bx:nth-child(2):hover{
+    background-image: url(/css/img/prt/prt066.jpg);
 }
 /* reviews */
 .reviews{

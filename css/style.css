@@ -32,7 +32,8 @@
     --services-card-res: rgba(4, 38, 15, 0.3);
     --treatments-card-res: rgba(38, 35, 4, 0.3);
     --color-white-decor--card: rgba(255, 255, 255, 0.25);
-    --border-card: 1px solid rgba(205, 205, 205, 0.2);
+    /* --border-card: 1px solid rgba(205, 205, 205, 0.2); */
+    --border-card: none;
     --br-crd-ba:0 0 2px rgb(191, 255, 0);
     /* color palette */
     --opc-crd: 0.33;
@@ -43,6 +44,7 @@
     --clr-05: rgba(140, 117, 3, 0.14); 
     --clr-06: rgba(166, 156, 18, 0.28);
     --clr-07: rgba(2, 81, 89, 0.8);
+    --clr-pr: rgba(166, 156, 18, 0.22);
      /* svg colors */
     --svg-clr: rgb(9, 225, 249);
 }
@@ -273,9 +275,9 @@ main{
     margin-right: 5%;
 
     text-align: center;
-    background: var(--clr-05);
+    background: var(--clr-pr);
     border-radius: 30px;
-    border: 1px solid var(--color-white-decor--card);  
+    border: var(--border-card);  
 }
 
 .card:first-child{
@@ -305,8 +307,8 @@ main{
 /* work time */
 .wt_bg{
     background: rgba(0, 0, 0, 0.6);
-    border-top: var(--border-card);
-    border-bottom: var(--border-card);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 .worktime{
     display: grid;
@@ -442,7 +444,7 @@ footer{
     grid-column: 1/-1;
     grid-row: 6;
     min-height: 300px;
-    background: rgba(0, 0, 0, 0.7);
+    background-image: linear-gradient(to bottom, var(--clr-03), rgba(0,0,0,0.8));
     border-top: var(--border-card);
 
     display: flex;
@@ -621,6 +623,8 @@ footer p:last-child{
     transform-origin: right;
     animation: changewidth 8s ease-in;
     animation-delay: 6s;
+    backdrop-filter: saturate(120%) blur(3px);
+    -webkit-backdrop-filter: saturate(120%) blur(3px);
 }
 /* .whatsapp_float:hover ~ .bknw-bg{
     animation: changewidth 8s ease-in;
@@ -651,11 +655,17 @@ footer p:last-child{
     0% {
         opacity: 0;
     }
+    10% {
+        opacity: 0;
+    }
     20% {
         opacity: 1;
     }
     80% {
         opacity: 1;
+    }
+    90% {
+        opacity: 0;
     }
     100% {
         opacity: 0;
@@ -712,15 +722,14 @@ footer p:last-child{
                 <img src="/css/img/prt/prtu01.jpg" alt="">  */
 /*|| portfolio */
 .portfolio{
-     background: rgba(0, 0, 0, 0.4);
-     border-top-left-radius: 25px;
-     border-top-right-radius: 25px;
-     border-top: var(--border-card);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0, 0, 0, 0.3));
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .portfolio_wrapper{
     display: flex;
     flex-direction: row;
-    padding: 5% var(--padding);
+    padding: 5% var(--padding) 10%;
     border: var(--border);
 
     overflow: auto;
@@ -753,21 +762,15 @@ footer p:last-child{
     margin-bottom: 8px;
 }
 .columflexgrid_portfolio:nth-child(1) .prt-bx:nth-child(2){
-    background-image: url(/css/img/prt/prt022.jpg);
+    background-image: url(/css/img/prt/prtu05.jpg);
     cursor: pointer;
-    box-shadow: var(--br-crd-ba);
 }
-.columflexgrid_portfolio:nth-child(1) .prt-bx:nth-child(2):hover{
-    background-image: url(/css/img/prt/prt02.jpg);
-}
+
+
+
 .columflexgrid_portfolio:nth-child(2) .prt-bx:nth-child(1){
-    background-image: url(/css/img/prt/prt03.jpg);
+    background-image: url(/css/img/prt/prtu06.jpg);
     margin-bottom: 8px;
-    box-shadow: var(--br-crd-ba);
-    cursor: pointer;
-}
-.columflexgrid_portfolio:nth-child(2) .prt-bx:nth-child(1):hover{
-    background-image: url(/css/img/prt/prt033.jpg);
 }
 .columflexgrid_portfolio:nth-child(2) .prt-bx:nth-child(2){
     background-image: url(/css/img/prt/prt04.jpg);
@@ -808,13 +811,23 @@ footer p:last-child{
     margin-bottom: 8px;
 }
 .columflexgrid_portfolio:nth-child(5) .prt-bx:nth-child(2){
-    background-image: url(/css/img/prt/prtu05.jpg);
+    background-image: url(/css/img/prt/prt02.jpg);
+    box-shadow:var(--br-crd-ba);
+    cursor: pointer;
+}
+.columflexgrid_portfolio:nth-child(5) .prt-bx:nth-child(2):hover{
+    background-image: url(/css/img/prt/prt022.jpg);
 }
 
 
 .columflexgrid_portfolio:nth-child(6) .prt-bx:nth-child(1){
-    background-image: url(/css/img/prt/prtu06.jpg);
+    background-image: url(/css/img/prt/prt03.jpg);
     margin-bottom: 8px;
+    box-shadow: var(--br-crd-ba);
+    cursor: pointer;
+}
+.columflexgrid_portfolio:nth-child(6) .prt-bx:nth-child(1):hover{
+    background-image: url(/css/img/prt/prt033.jpg);
 }
 .columflexgrid_portfolio:nth-child(6) .prt-bx:nth-child(2){
     background-image: url(/css/img/prt/prt06.jpg);
@@ -826,10 +839,7 @@ footer p:last-child{
 }
 /* reviews */
 .reviews{
-    background: rgba(0, 0, 0, 0.4);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-bottom: var(--border-card);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
 }
 .textimonials_wrapper{
     display: flex;
@@ -857,7 +867,7 @@ footer p:last-child{
     text-align: center;
     border-radius: 30px;
     padding: 4%;
-    background: var(--clr-02);
+    background: var(--clr-04);
     margin: auto 5% auto 0%;
 }
 .card_testimonials:not(:last-child){
@@ -961,7 +971,6 @@ footer p:last-child{
     background: var(--clr-03);
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    border: var(--border-card);
 
     display: flex;
     flex-direction: column;
@@ -1115,7 +1124,7 @@ footer p:last-child{
 
     overflow: scroll;
     scroll-snap-type: x mandatory;  
-    /* scroll-padding: 40px; */
+    scroll-padding: 40px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -1126,7 +1135,6 @@ footer p:last-child{
     flex: 1 0 85%;
     padding-right: 30px;
     scroll-snap-align: start;
-    scroll-margin: 40px;
     margin: auto;
 }
 .list-prices h3{

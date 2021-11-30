@@ -228,7 +228,7 @@ const swiper_main = new Swiper('.swiper_main', {
     clickable: true,
   }
   ,autoplay: {
-    delay: 5000,
+    delay: 8000,
   }
 });
 // slider pics salon
@@ -263,17 +263,16 @@ window.onload = function() {
   const maxTlSlide1 = new TimelineMax({repeat: -1});
 
     const tlSlide1 = new TimelineMax({repeat:1})
-    .fromTo(changeword, 3,{opacity:0, onComplete:function() {
+    .fromTo(changeword, 2,{opacity:0, onComplete:function() {
         changeword.innerHTML = texts[0];
     }}, {opacity:1})
-    .to(changeword, 2,{opacity:0, onComplete:function() {
+    .to(changeword, 1,{opacity:0, onComplete:function() {
         changeword.innerHTML = texts[1];
     }})
-    .to(changeword, 3, {opacity:1})
-    .to(changeword, 2, {opacity:0, onComplete:function() {
+    .to(changeword, 2, {opacity:1})
+    .to(changeword, 1, {opacity:0, onComplete:function() {
       changeword.innerHTML = texts[0];
     }})
     maxTlSlide1.add(tlSlide1);
 };
-
 

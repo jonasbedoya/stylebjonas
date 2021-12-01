@@ -7,7 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;1,700&display=swap');
 /*  */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-
+/* Outfit */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -85,8 +86,8 @@ h1{
 }
 p{
     color: var(--color-white);
-    font-family: 'Gentium Basic', serif;
-    font-size: clamp(1.063rem, 1.0026rem + 0.3019vw, 1.18rem);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
     /* CLAMP 940px*/
     /* font-size: 1.18rem; */
     /* font-size: clamp(1.063rem, 1.0190rem + 0.2200vw, 1.25rem); */
@@ -117,7 +118,7 @@ p{
 p1{
     display: block;
     color: var(--color-white);
-    font-family: 'Gentium Basic', serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 1rem;
     /* font-size: clamp(1.063rem, 1.0026rem + 0.3019vw, 1.18rem); */
     letter-spacing: 0.5px;
@@ -137,8 +138,8 @@ p1{
 /* tittles cards */
 h3{
     color: var(--color-white);
-    font-family: 'Gentium Basic', serif;
-    font-size: clamp(1.125rem, 0.9635rem + 0.8077vw, 1.438rem);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
     letter-spacing: 2px;
     /* CLAMP 940px*/
     /* font-size: clamp(1.125rem, 1.0514rem + 0.3682vw, 1.438rem); */
@@ -146,7 +147,7 @@ h3{
     /* font-size: 1.438rem; */
     /* CLAMP 320px*/
     /* font-size: 1.125rem; */
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     padding: 0%;
     margin-bottom: 0.2rem !important;
@@ -179,7 +180,7 @@ h6{
 a1, button{
     color: var(--color-white);
     text-decoration: none;
-    font-family: 'Gentium Basic', serif;
+    font-family: 'Outfit', sans-serif;
     /* CLAMP 1680px*/
     font-size: 1.125rem;
     /* CLAMP 375px*/
@@ -276,7 +277,7 @@ main{
     margin-right: 5%;
 
     text-align: center;
-    background: var(--clr-pr);
+    background-image: linear-gradient(to top, var(--clr-pr), var(--clr-03));
     border-radius: 30px;
     border: var(--border-card);  
 }
@@ -284,7 +285,7 @@ main{
 .card:first-child{
     margin-left: var(--padding);
 }
-.card_img_flam, .card_img_rehab, .card_img_kera{
+.card_img_flam, .card_img_rehab, .card_img_kera, .card_img_men{
     height: 10rem;
     border: var(--border);
     background: var(--clr-03);
@@ -303,7 +304,8 @@ main{
 .card_img_kera{
     background-image: url('/css/svg/keratina.svg');
 }
-@media screen and (max-width: 550px) {
+.card_img_men{
+    background-image: url('/css/svg/Menseason.svg');
 }
 /* work time */
 .wt_bg{
@@ -445,7 +447,7 @@ footer{
     grid-column: 1/-1;
     grid-row: 6;
     min-height: 300px;
-    background-image: linear-gradient(to bottom, var(--clr-03), rgba(0,0,0,0.8));
+    background: rgba(0,0,0,0.7);
     border-top: var(--border-card);
 
     display: flex;
@@ -569,10 +571,6 @@ footer p:last-child{
     line-height: 6rem;
     word-spacing: 100vh;
     color: rgba(245, 245, 245, 0.856);
-}
-#changeword{
-    opacity: 1;
-    color: rgb(189, 181, 69);
 }
 /* second slider */
 .slide>.slide_2{
@@ -698,32 +696,13 @@ footer p:last-child{
 .fa-whatsapp {
     margin: auto;
 }
-
 /* tittle */
 .tittle_section{
     padding: 8% var(--padding) 4%;
 }
-/*                 <img src="/css/img/prt/prt01.jpg" alt="">
-                <img src="/css/img/prt/prtu03.jpg" alt="">                      
-            </article>
-            <article class="columflexgrid_portfolio">
-                <img src="/css/img/prt/prt03.jpg" alt="">
-                <img src="/css/img/prt/prt02.jpg" alt="">  
-            </article>
-            <article class="columflexgrid_portfolio">
-                <img src="/css/img/prt/prt05.jpg" alt="">
-                <img src="/css/img/prt/prtu05.jpg" alt=""> 
-            </article>
-            <article class="columflexgrid_portfolio">
-                <img src="/css/img/prt/prtu02.jpg" alt="">
-                <img src="/css/img/prt/prt04.jpg" alt="">  
-            </article>
-            <article class="columflexgrid_portfolio">
-                <img src="/css/img/prt/prtu04.jpg" alt="">
-                <img src="/css/img/prt/prtu01.jpg" alt="">  */
 /*|| portfolio */
 .portfolio{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0, 0, 0, 0.3));
+    background: rgba(0, 0, 0, 0.6);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -753,15 +732,14 @@ footer p:last-child{
     border-radius: 8px;
 }
 .columflexgrid_portfolio:nth-child(1) .prt-bx:nth-child(1){
-    background-image: url(/css/img/prt/prt01.jpg);
-    margin-bottom: 8px;
-    box-shadow: var(--br-crd-ba);
+    background-image: url(/css/img/prt/prt06.jpg);
+    box-shadow:var(--br-crd-ba);
     cursor: pointer;
 }
 .columflexgrid_portfolio:nth-child(1) .prt-bx:nth-child(1):hover{
-    background-image: url(/css/img/prt/prt011.jpg);
-    margin-bottom: 8px;
+    background-image: url(/css/img/prt/prt066.jpg);
 }
+
 .columflexgrid_portfolio:nth-child(1) .prt-bx:nth-child(2){
     background-image: url(/css/img/prt/prtu05.jpg);
     cursor: pointer;
@@ -831,16 +809,18 @@ footer p:last-child{
     background-image: url(/css/img/prt/prt033.jpg);
 }
 .columflexgrid_portfolio:nth-child(6) .prt-bx:nth-child(2){
-    background-image: url(/css/img/prt/prt06.jpg);
-    box-shadow:var(--br-crd-ba);
+    background-image: url(/css/img/prt/prt01.jpg);
+    margin-bottom: 8px;
+    box-shadow: var(--br-crd-ba);
     cursor: pointer;
 }
 .columflexgrid_portfolio:nth-child(6) .prt-bx:nth-child(2):hover{
-    background-image: url(/css/img/prt/prt066.jpg);
+    background-image: url(/css/img/prt/prt011.jpg);
+    margin-bottom: 8px;
 }
 /* reviews */
 .reviews{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    background: rgba(0, 0, 0, 0.6);
 }
 .textimonials_wrapper{
     display: flex;
@@ -911,7 +891,7 @@ footer p:last-child{
 }
 .presentation_card{
     padding: 8%;
-    background: var(--clr-03);
+    background: linear-gradient(to bottom, var(--clr-03), var(--clr-03), var(--clr-03), var(--clr-04));
     border-radius: 40px;
     line-height: 1.7rem;
     border: 2px solid;
@@ -959,6 +939,9 @@ footer p:last-child{
 .atsalon_text{
     padding:  0% 8% 8% 8%;
 }
+.atsalon h3 {
+    margin-top: 2%;
+}
 .atsalon_text *{
     text-align: center;
 }
@@ -969,7 +952,7 @@ footer p:last-child{
 }
 /* partners */
 .partners{
-    background: var(--clr-03);
+    background: var(--clr-02);
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
 
@@ -1065,7 +1048,6 @@ footer p:last-child{
     min-height: 9rem;
 
     border-radius: 30px;
-    background-color: var(--clr-03);
 }
 .article_img_haircut{
     grid-column: 1;
@@ -1115,13 +1097,15 @@ footer p:last-child{
     display: flex;
     flex-direction: row;
     height: auto;
-    padding: 10%;
+    padding: 18% 10%;
     border: var(--border-card);
 
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
 
     margin-bottom: 1.3rem;
+
+    margin-left: -5%;
+    margin-right: -5%;
 
     overflow: scroll;
     scroll-snap-type: x mandatory;  

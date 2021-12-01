@@ -214,22 +214,22 @@
 const swiper_main = new Swiper('.swiper_main', {
   // Navigation arrows
   grabCursor: true,
-  loop: true,
-  mousewheel: {
-    forceToAxis: true,
-  },
-  keyboard: true,
-  navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: ".pagination_main",
-    clickable: true,
-  }
-  ,autoplay: {
-    delay: 8000,
-  }
+  // loop: true,
+  // mousewheel: {
+  //   forceToAxis: true,
+  // },
+  // keyboard: true,
+  // navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  // },
+  // pagination: {
+  //   el: ".pagination_main",
+  //   clickable: true,
+  // }
+  // ,autoplay: {
+  //   delay: 8000,
+  // }
 });
 // slider pics salon
 const swiper_salon = new Swiper('.salon_swiper', {

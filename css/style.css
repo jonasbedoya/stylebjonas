@@ -19,6 +19,8 @@
     /* 320px -> 1680px */
     /* 19px -> 300px */
     /* --margin: clamp(1.188rem, -3.2384rem + 22.1318vw, 20rem); */
+    --mrgart: 8%;
+    --crdpdd: 8%;
     --maxwidth: 940px;
     --padding: 4%;
     --pddng-sct: 4%;
@@ -56,10 +58,7 @@
     }
 }
 body{
-    /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/css/img/background.jpg'); */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(187.59deg, #015159 4.7%, #019788 111.17%);
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(191.98deg, #015159 26.53%, #019788 112.44%);    grid-template-rows: auto;
     background-attachment: fixed;
 }
 /* animation */
@@ -369,7 +368,6 @@ main{
     flex-direction: column;
     margin: auto 0% auto 0%;
     padding-right: 5%;
-    border-right: 1px solid var(--color-white-decor--card);
 }
 .worktime>article:first-child>h1{
     text-align: right;
@@ -393,7 +391,7 @@ main{
     flex-direction: column;
     justify-content: center;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
     .worktime{
         grid-template-columns: 1fr;
         border-bottom-right-radius: 0px !important;
@@ -477,14 +475,14 @@ main{
 footer{
     grid-column: 1/-1;
     grid-row: 6;
-    min-height: 300px;
+    min-height: auto;
     background: rgba(0,0,0,0.7);
     border-top: var(--border-card);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: var(--padding) var(--padding) 15%;
+    padding: var(--padding) var(--padding) 8%;
     margin: 0% auto;
 }
 footer>*{
@@ -513,16 +511,16 @@ footer h3{
     font-size: 1.125rem;
     border-radius: 30px;
     cursor: pointer;
-    padding: 2% 4%;
+    padding: 1rem 2.5rem;
     text-align: center;
     background: var(--clr-06);
-    border: 1px solid var(--color-white-decor--card);
+    border: var(--border);
 }
 .mapslink:hover{
     background: var(--clr-05);
 }
 .contactme>h1, .socialslinks *{
-    margin-bottom: 1.8rem;
+    margin: 1.8rem auto;
 }
 footer p:last-child{
     margin-bottom: 0%;
@@ -530,15 +528,14 @@ footer p:last-child{
 .socials{
     display: flex;
     flex-direction: row;
-    flex: 1 1;
     justify-content: center;
-    border: var(--border);
+    width: fit-content;
 }
 
 /* icons socials */
-.fa-instagram, .fa-facebook{
-    margin: auto 2% 0% 0%;
-    font-size: 1.8rem;
+.fa-instagram{
+    margin: auto 0rem auto auto;
+    font-size: 3rem;
     cursor: pointer;
     color: var(--color-white);
 }
@@ -546,8 +543,8 @@ footer p:last-child{
     font-family: 'Nunito Sans', sans-serif;
     color: var(--color-white);
     text-decoration-line: none;
-    font-size: 1.6rem;
-    margin: auto 0% 0% 0%;
+    font-size: 2.3rem;
+    margin: auto auto auto 1rem;
 }
 @media screen and (min-width: 650px) {
     .contactme{
@@ -558,11 +555,18 @@ footer p:last-child{
         margin: 0% auto;
         border: var(--border);
     }
-    .contactme>h1{
-        flex: 1 0 67%;
-    }
     .contactme>section{
         flex: 1 0 33%;
+    }
+    .sys__{
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 67%;
+        margin: auto;
+    }
+    .sys__ p{
+        width: 80%;
+        margin: 0% auto;
     }
     
 }
@@ -962,10 +966,7 @@ footer p:last-child{
 .intro article{
     display: flex;
     flex-direction: column;
-    margin-bottom: 8%;
-}
-.intro article:last-child{
-    margin-bottom: 0%;
+    margin-bottom: var(--mrgart);
 }
 .intro article *{
     margin: 0% auto;
@@ -974,16 +975,14 @@ footer p:last-child{
 .intro h1{
     text-transform: none;
     border: var(--border);
-    padding: 8% 0% 5% 0%;
 }
 .presentation_card{
-    padding: 8%;
-    background: linear-gradient(to bottom, var(--clr-03), var(--clr-03), var(--clr-04));
+    padding: var(--crdpdd);
+    background: linear-gradient(to top, var(--clr-03), var(--clr-03), var(--clr-04));
     border-radius: 40px;
     line-height: 1.7rem;
     border: 2px solid;
     border: var(--border-card);
-    /* backdrop-filter: blur(140px); */
 }
 .intro_img{
     background-image: url('/css/img/jonasport.jpg');
@@ -1006,7 +1005,7 @@ footer p:last-child{
     background: var(--clr-03);
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
-    padding: 8%;
+    padding: var(--crdpdd);
     border: var(--border-card);
 }
 .aboutme p, .atsalon p{
@@ -1024,7 +1023,7 @@ footer p:last-child{
     width: 100%;
 }
 .atsalon_text{
-    padding:  0% 8% 8% 8%;
+    padding: 0% var(--crdpdd) var(--crdpdd) var(--crdpdd);
 }
 .atsalon h3 {
     margin-top: 2%;
@@ -1066,13 +1065,13 @@ footer p:last-child{
         background: rgba(0, 0, 0, 0.4);
         border-radius: 20px;
         margin-bottom: 2%;
-        padding: 5%;
+        padding: 5% 10%;
     }
     .intro__studio{
         grid-row: 3;
         background: rgba(0, 0, 0, 0.4);
         border-radius: 20px;
-        padding: 5%;
+        padding: 5% 10% 0%;
     }
     .presentation_card{
         flex: 1 !important;
@@ -1091,9 +1090,10 @@ footer p:last-child{
         background-size: 100%;
         background-position: center 15%;
         /* opacity: 0.9; */
-        border-radius: 20px !important;
-        padding-top: 80%;
-        width: 80%;
+        border-radius: 0px !important;
+        padding-top: 110%;
+        height: fit-content;
+        width: 100%;
         margin-bottom: 8% !important;
         border: var(--border-card);
         /* border: var(--border); */
@@ -1118,6 +1118,8 @@ footer p:last-child{
     }
     .rdmr{
         height: auto !important;
+        width: 100% !important;
+        margin: 0% !important;
     }
     .atsalon{
         background: transparent !important;
@@ -1126,28 +1128,24 @@ footer p:last-child{
         border: var(--border-card);
 
         display: flex;
-        flex-direction: row-reverse !important;
-    }
-    .salon_swiper{
-        flex: 1!important;
-
-        height: 20rem !important;
-        flex-basis: 60% !important;
-        border-radius: 20px !important;
-    }
-    .atsalon_text{
-        flex: 1 !important;
-        flex-basis: 40% !important;
-        padding: 0%;
-        margin: auto 0% auto auto !important;
+        flex-direction: column-reverse !important;
     }
     .atsalon_text h3{
         margin: auto auto 0.8rem 0% !important;
     }
     .atsalon p{
-        width: 95%;
-        margin: 0% auto auto 0% !important;
+        width: 80%;
+        margin: 0% auto 2rem 0% !important;
     }
+    .salon_swiper{
+        height: fit-content !important;
+        width: 65% !important;
+        border-radius: 0px !important;
+    }
+    .atsalon_text{
+        padding: 0%;
+    }
+
 }
 /* partners */
 .partners{
